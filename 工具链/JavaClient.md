@@ -1,6 +1,6 @@
 # Java客户端调用
 
-Concrete 工具链默认提供了一下两个实现。
+Concrete 工具链默认提供了以下两个实现。
 ```xml
     <dependency>
         <groupId>cc.coodex</groupId>
