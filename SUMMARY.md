@@ -24,12 +24,3 @@
     * [插件.FreemarkerMessageFormatter](工具链/FreemarkerMessageFormatter.md)
     * [API工具](工具链/API.md)
     * [Java客户端](工具链/JavaClient.md)
-
-* 扩展点
-    * [ServiceTimingChecker](扩展点/ServiceTimingChecker.md)
-    * [MessagePatternLoader](扩展点/MessagePatternLoader.md)
-    * [MessageFormatter](扩展点/MessageFormatter.md)
-    * 服务原子切片AbstractInterceptor
-
-* 各部分说明
-    * coodex utilities
