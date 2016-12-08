@@ -1,0 +1,14 @@
+{
+  "gitbook": "3.*.*",
+  "title": "Concrete手册",
+  "author": "Shen Hainan<jujus.shen@126.com>",
+  "plugins": ["advanced-emoji", "mermaid","tbfed-pagefooter"],
+  "language": "zh-hans",
+  "pluginsConfig": {
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy coodex.cc 2016",
+      "modify_label": "修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    }
+  }
+}
