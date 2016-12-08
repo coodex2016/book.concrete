@@ -6,7 +6,7 @@
   "language": "zh-hans",
   "pluginsConfig": {
     "tbfed-pagefooter": {
-      "copyright":"Copyright &copy coodex.cc 2016",
+      "copyright":"coodex.cc 2016",
       "modify_label": "修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     }
