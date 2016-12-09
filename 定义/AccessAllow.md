@@ -24,3 +24,8 @@ public interface 火灾 extends ConcreteService{
     String 先走();
 }
 ```
+
+特权的定义:
+* `*` 表示绝对特权，所有服务原子均有权访问
+* `*.role` 表示任意领域内的role角色
+* `domain.*` 表示领域内的特权，既该领域内所有服务均可使用
