@@ -10,14 +10,15 @@
     String 绿色通道();
 ```
 
-如果在具体服务模块上定义了`@RoleOwner`，则说明需要指定属主下的角色。
+如果在具体服务模块上定义了~~@RoleOwner~~`@Domain`，则说明需要指定~~属主~~领域下的角色。
 
 例如：中国.官员 可以先走
 
 ```java
 
 @MicroService("克拉玛依")
-@RoleOwner("中国")
+// RoleOwner("中国")
+@Domain("中国")
 public interface 火灾 extends ConcreteService{
     @AccessAllow({"官员"})
     String 先走();
