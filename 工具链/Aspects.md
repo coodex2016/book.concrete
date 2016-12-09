@@ -73,7 +73,7 @@ Concrete工具链提供了3种切片来支持Concrete的定义。
 
 即可，无须重新启动
 
-啊，忘了，需要开启`Profile.reloadInteval`，在java参数中增加`-DProfile.reloadInteval=n`, n>0，单位为秒 
+啊，忘了，需要开启`Profile.reloadInterval`，在java参数中增加`-DProfile.reloadInterval=n`, n>0，单位为秒 
     
 
 ## 切片链方式
