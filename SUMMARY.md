@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [简介](README.md)
 
 * [定义](定义/README.md)
     * [@MicroService](定义/MicroService.md)
@@ -24,4 +24,3 @@
     * [插件.FreemarkerMessageFormatter](工具链/FreemarkerMessageFormatter.md)
     * [API工具](工具链/API.md)
     * [Java客户端](工具链/JavaClient.md)
-
