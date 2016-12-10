@@ -18,6 +18,10 @@ Concrete 是一种基于java的服务定义规范。
 
 ------
 
+## 2016-12-10
+调整Jaxrs的令牌模式，不再依赖servlet container环境。
+
+
 ## 2016-12-09
 
 * 修改RoleOwner为Domain，为服务模块延伸了领域概念。
