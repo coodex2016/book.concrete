@@ -2,7 +2,7 @@
   "gitbook": "3.*.*",
   "title": "Concrete手册",
   "author": "Shen Hainan<jujus.shen@126.com>",
-  "plugins": ["advanced-emoji", "mermaid","tbfed-pagefooter"],
+  "plugins": ["mermaid-gb3","tbfed-pagefooter"],
   "language": "zh-hans",
   "pluginsConfig": {
     "tbfed-pagefooter": {
