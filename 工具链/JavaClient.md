@@ -35,5 +35,9 @@ concrete.properties配置
 
 一样的，JavaClient也支持数据模拟，即，无server并行开发，增加java参数`-Dcc.coodex.concrete.jaxrs.devMode=true`
 
------
-TODO: 暂时还不支持ssl，需要考虑切入点和接入方式
+如果serviceRoot为local，则直接调用本地服务
+
+okHttp3.properties
+    
+    _server_ = 
+    _server_.ssl = 

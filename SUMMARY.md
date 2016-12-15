@@ -17,10 +17,11 @@
     * [服务原子切片](工具链/Aspects.md)
     * [单元调试](工具链/concrete-test.md)
     * 服务端支持
-        * [JSR311 JAX-RS 1.0](工具链/jsr311.md)
+        * [JSR311 JAX-RS 1.1](工具链/jsr311.md)
         * [JSR339 JAX-RS 2.0](工具链/jsr339.md)
     * [ResourceBundlesMessagePatternLoader](工具链/ResourceBundlesMessagePatternLoader.md)
     * [JavaTextFormatMessageFormatter](工具链/JavaTextFormatMessageFormatter.md)
     * [插件.FreemarkerMessageFormatter](工具链/FreemarkerMessageFormatter.md)
     * [API工具](工具链/API.md)
     * [Java客户端](工具链/JavaClient.md)
+    * [附件管理](工具链/fileServer.md)

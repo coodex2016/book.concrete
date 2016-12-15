@@ -18,6 +18,10 @@ Concrete 是一种基于java的服务定义规范。
 
 ------
 
+## 2016-12-15
+
+增加[附件管理模块](工具链/fileServer.md)及其参考实现。
+
 ## 2016-12-10
 调整Jaxrs的令牌模式，不再依赖servlet container环境。
 
