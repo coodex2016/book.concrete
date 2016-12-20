@@ -12,6 +12,15 @@ concrete提供了服务端、客户端、存储的参考实现
     
     上传: POST /attachments/upload/byform/{clientId}/{tokenId}
     下载：GET /attachments/download/{attachmentId};c=clientId;t=tokenId
+    
+依赖apache commons-fileupload
+```xml
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+```
 
 ## 客户端
 
