@@ -31,4 +31,10 @@ API.generate(渲染类型, 输出位置, 服务模块和ErrorCodes的包);
 | JaxRS.code.jquery.js.v1 | 生成基于jquery的javascript api |
 | JaxRS.doc.jquery.gitbook.v1 | 生成jquery调用服务原子的API手册，Gitbook格式 |
 
+------
+
+- **2017-02-09**
+    
+    jaxrs.code.jquery.js.v1增加模块名属性。jaxrs.code.jquery.js.v1._moduleName_
+
 

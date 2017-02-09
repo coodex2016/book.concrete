@@ -2,9 +2,12 @@
 
 Concrete 是一种基于java的服务定义规范。
 
+https://github.com/coodex2016/concrete
+
+
 ## 与0.1.0的不同
 
-差异还是蛮大的，基本上算是完全重构了一个版本，降低了工具链自身与spring的耦合度，去掉了默认的一些模块。
+差异还是蛮大的，基本上算是完全~~重构~~[^1]构建了一个版本，降低了工具链自身与spring的耦合度，去掉了默认的一些模块。
 
 主要差别有
 
@@ -17,6 +20,16 @@ Concrete 是一种基于java的服务定义规范。
 | 文档 | 无 | 这本就是 |
 
 ------
+
+## 2017-02-09
+
+增加token Cookie path设定。原逻辑根据各模块的baseUri设置cookie path，主要考虑了同功能负载均衡可共享cookie，当多模块分离部署需共享cookie时，会无法获取。
+    
+    concrete.properties 增加配置项: jaxrs.token.cookie.path，默认为使用baseUri，否则使用设定值
+
+
+
+
 ## 2016-12-20
 
 将账户是否有效的属性从Account接口中移至Token中。Account是客观账户实体，Token是账户认证后的状态。
@@ -25,7 +38,7 @@ Token中增加了当前账户相关的接口。
 
 ## 2016-12-15
 
-增加[附件管理模块](工具链/fileServer.md)及其参考实现。
+增加[附件管理模块](工具链/fileServer.md)及基于Jax-RS 2.0 和 [FastDFS](https://github.com/happyfish100)的参考实现。
 
 ## 2016-12-10
 调整Jaxrs的令牌模式，不再依赖servlet container环境。
@@ -43,4 +56,7 @@ Token中增加了当前账户相关的接口。
 ## 2016-12-07
 
 * 工具链增加了[java客户端](工具链/JavaClient.md)
+
+--------
+[^1]: 重构一词使用有误。代码重构: [指对软件代码做任何更动以增加可读性或者简化结构而不影响输出结果](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A0%81%E9%87%8D%E6%9E%84)，而实质上，concrete 0.2.0-SNAPSHOT改变了较多的行为和结果
 
