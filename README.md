@@ -21,6 +21,12 @@ https://github.com/coodex2016/concrete
 
 ------
 
+## 2017-02-21
+
+[@Description](定义/Description.md) 增强装饰功能。
+可以装饰pojo属性和parameter。pojo属性指public field和getXXX isXXX(boolean)
+
+
 ## 2017-02-09
 
 增加token Cookie path设定。原逻辑根据各模块的baseUri设置cookie path，主要考虑了同功能负载均衡可共享cookie，当多模块分离部署需共享cookie时，会无法获取。

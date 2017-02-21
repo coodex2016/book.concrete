@@ -6,3 +6,7 @@
 * description 文档化时的详细说明
 
 Concrete工具链为jaxrs服务及jquery client提供了[文档化工具](../工具链/API.md)。
+
+## 2017-02-17
+
+可以装饰pojo属性和parameter。pojo属性指public field和getXXX isXXX(boolean)
