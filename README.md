@@ -21,6 +21,13 @@ https://github.com/coodex2016/concrete
 
 ------
 
+## 2017-03-09
+- 修复BigString注解的全部缺陷
+- JavaClient模块强化，增加AOP功能
+    - 继承cc.coodex.concrete.core.intercept.AbstractInterceptor，重载有关方法
+    - META-INF/services/cc.coodex.concrete.core.intercept.ConcreteInterceptor 中增加需要使用到的拦截器
+    - cc.coodex.concrete.jaxrs.Client.getUnitFromContext：根据拦截器上下文获取Unit信息
+
 ## 2017-02-21
 
 [@Description](定义/Description.md) 增强装饰功能。
