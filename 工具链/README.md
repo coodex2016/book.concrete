@@ -9,9 +9,9 @@ Concrete工具链提供了一套Concrete规范的参考实现。
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>cc.coodex</groupId>
+            <groupId>org.coodex</groupId>
             <artifactId>concrete-bom</artifactId>
-            <version>0.2.0-SNAPSHOT</version>
+            <version>0.2.0</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>

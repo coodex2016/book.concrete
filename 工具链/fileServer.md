@@ -25,7 +25,7 @@ concrete提供了服务端、客户端、存储的参考实现
 ## 客户端
 
 客户端附件拦截器
-cc.coodex.concrete.attachments.client.AttachmentInterceptor
+org.coodex.concrete.attachments.client.AttachmentInterceptor
 
 返回的Pojo中，包含@Attachment注解的String域可以被自动许可
 

@@ -6,7 +6,7 @@
 
 例如：妇女或小孩可以使用绿色通道
 ```java
-    @AccessAllow({"women", "children"})
+    @AccessAllow( roles = {"women", "children"})
     String 绿色通道();
 ```
 
@@ -20,7 +20,7 @@
 // RoleOwner("中国")
 @Domain("中国")
 public interface 火灾 extends ConcreteService{
-    @AccessAllow({"官员"})
+    @AccessAllow(roles = {"官员"})
     String 先走();
 }
 ```

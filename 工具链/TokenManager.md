@@ -7,7 +7,7 @@
 或者把TokenWrapper配置成bean，自动装载
 
 ```xml
-    <bean class="cc.coodex.concrete.core.token.TokenWrapper"></bean>
+    <bean class="org.coodex.concrete.core.token.TokenWrapper"></bean>
 ```
 
 ```java
@@ -25,7 +25,7 @@
 
 ```xml
         <dependency>
-            <groupId>cc.coodex</groupId>
+            <groupId>org.coodex</groupId>
             <artifactId>shared-cache-jedis</artifactId>
         </dependency>
 ```
@@ -34,13 +34,13 @@
 
 ```xml
         <dependency>
-            <groupId>cc.coodex</groupId>
+            <groupId>org.coodex</groupId>
             <artifactId>shared-cache-memcached</artifactId>
         </dependency>
 ```
 
 ```xml
-    <bean class="cc.coodex.concrete.core.token.sharedcache.SharedCacheTokenManager"/>
+    <bean class="org.coodex.concrete.core.token.sharedcache.SharedCacheTokenManager"/>
 ```
 
 ### concrete.properties配置

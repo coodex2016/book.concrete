@@ -5,7 +5,7 @@
 
 ```xml
         <dependency>
-            <groupId>cc.coodex</groupId>
+            <groupId>org.coodex</groupId>
             <artifactId>concrete-core-spring</artifactId>
         </dependency>
 ```

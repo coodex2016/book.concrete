@@ -3,7 +3,7 @@
 
 ```xml
         <dependency>
-            <groupId>cc.coodex</groupId>
+            <groupId>org.coodex</groupId>
             <artifactId>concrete-api-tools</artifactId>
             <!-- 建议在test作用于中生成api及手册 -->
             <scope>test</scope>

@@ -2,7 +2,7 @@
 
 ```xml
         <dependency>
-            <groupId>cc.coodex</groupId>
+            <groupId>org.coodex</groupId>
             <artifactId>concrete-test</artifactId>
             <scope>test</scope>
         </dependency>

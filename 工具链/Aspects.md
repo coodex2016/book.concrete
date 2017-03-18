@@ -10,20 +10,20 @@ Concrete工具链提供了3种切片来支持Concrete的定义。
 ## RBAC
 
 ```xml
-    <bean class="cc.coodex.concrete.spring.aspects.RBAC_Aspect"></bean>
+    <bean class="org.coodex.concrete.spring.aspects.RBAC_Aspect"></bean>
 ```
 
 ## Bean Validation
 
 ```xml
-    <bean class="cc.coodex.concrete.spring.aspects.BeanValidationAspect"></bean>
+    <bean class="org.coodex.concrete.spring.aspects.BeanValidationAspect"></bean>
 ```
 可以通过实现ViolationsFormatter来修改默认的信息格式化。
 
 ## ServiceTiming
 
 ```xml
-    <bean class="cc.coodex.concrete.spring.aspects.ServiceTimingAspect"></bean>
+    <bean class="org.coodex.concrete.spring.aspects.ServiceTimingAspect"></bean>
 ```
 在`serviceTiming.properties`里定义验证规则，规则模版如下:
 
@@ -79,12 +79,12 @@ Concrete工具链提供了3种切片来支持Concrete的定义。
 ## 切片链方式
 
 ```xml
-    <bean class="cc.coodex.concrete.spring.aspects.ConcreteAOPChain">
+    <bean class="org.coodex.concrete.spring.aspects.ConcreteAOPChain">
         <constructor-arg index="0">
             <list>
-                <bean class="cc.coodex.concrete.core.intercept.BeanValidationInterceptor"></bean>
-                <bean class="cc.coodex.concrete.core.intercept.RBACInterceptor"></bean>
-                <bean class="cc.coodex.concrete.core.intercept.ServiceTimingInterceptor"></bean>
+                <bean class="org.coodex.concrete.core.intercept.BeanValidationInterceptor"></bean>
+                <bean class="org.coodex.concrete.core.intercept.RBACInterceptor"></bean>
+                <bean class="org.coodex.concrete.core.intercept.ServiceTimingInterceptor"></bean>
             </list>
         </constructor-arg>
     </bean>

@@ -2,7 +2,7 @@
 
 Concrete 是一种基于java的服务定义规范。
 
-https://github.com/coodex2016/concrete
+https://github.com/coodex2016/concrete.coodex.org
 
 
 ## 与0.1.0的不同
@@ -11,7 +11,7 @@ https://github.com/coodex2016/concrete
 
 主要差别有
 
-|  | 0.1.0 | 0.2.0-SNAPSHOT |
+|  | 0.1.0 | 0.2.0 |
 | --- | --- | --- |
 | 服务提供 | 基于Jaxrs，使用POST方法 | 贴近RESTFul风格，支持服务原子优先级 |
 | 客户端 | 基于sill，耦合了界面的一些元素，函数式调用 | 基于jQuery，对象式调用，Promise模式；提供java客户端 |
@@ -21,12 +21,23 @@ https://github.com/coodex2016/concrete
 
 ------
 
+## 2017-03-18
+- 315搞到了coodex.org域名，撒花
+- 重构包名 -> org.coodex
+- 重构groupId -> org.coodex
+- Apache Licence 2.0
+- git 迁移到 https://github.com/coodex2016/concrete.coodex.org
+- 基于 [V5哥](mailto:sujiwu@126.com) 的设计思路，添加jpa和spring data jpa的通用模块，定义了PO/VO转换的规约
+- 318 sonatype Staging repositories have been prepared for org.coodex，发布0.2.0
+- 文档域名也迁移到coodex.org
+- 开启0.2.1-SNAPSHOT，继续功能补充
+
 ## 2017-03-09
 - 修复BigString注解的全部缺陷
 - JavaClient模块强化，增加AOP功能
-    - 继承cc.coodex.concrete.core.intercept.AbstractInterceptor，重载有关方法
-    - META-INF/services/cc.coodex.concrete.core.intercept.ConcreteInterceptor 中增加需要使用到的拦截器
-    - cc.coodex.concrete.jaxrs.Client.getUnitFromContext：根据拦截器上下文获取Unit信息
+    - 继承org.coodex.concrete.core.intercept.AbstractInterceptor，重载有关方法
+    - META-INF/services/org.coodex.concrete.core.intercept.ConcreteInterceptor 中增加需要使用到的拦截器
+    - org.coodex.concrete.jaxrs.Client.getUnitFromContext：根据拦截器上下文获取Unit信息
 
 ## 2017-02-21
 
@@ -71,5 +82,5 @@ Token中增加了当前账户相关的接口。
 * 工具链增加了[java客户端](工具链/JavaClient.md)
 
 --------
-[^1]: 重构一词使用有误。代码重构: [指对软件代码做任何更动以增加可读性或者简化结构而不影响输出结果](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A0%81%E9%87%8D%E6%9E%84)，而实质上，concrete 0.2.0-SNAPSHOT改变了较多的行为和结果
+[^1]: 重构一词使用有误。代码重构: [指对软件代码做任何更动以增加可读性或者简化结构而不影响输出结果](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A0%81%E9%87%8D%E6%9E%84)，而实质上，concrete 0.2.0改变了较多的行为和结果
 
