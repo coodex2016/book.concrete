@@ -10,6 +10,11 @@
         </dependency>
 ```
 
+
+```xml
+    <bean class="org.coodex.concrete.spring.SpringBeanProvider"></bean>
+```
+
 当同一个服务模块有多个实现时，可以通过实现ConflictSolution解决冲突。默认提供了按照名称的解决方案。
 
 -----------------------------
