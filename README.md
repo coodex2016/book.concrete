@@ -21,6 +21,12 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-03-21
+
+- 增加分页相关的POJO抽象定义
+- 增加PageCopier通用方法，从spring data的page对象复制成PageResult
+- 修改ConcreteException，当最后一个参数为Throwable时，将其设置为引发ConcreteException的Cause
+
 ## 2017-03-18
 - 315搞到了coodex.org域名，撒花
 - 重构包名 -> org.coodex
