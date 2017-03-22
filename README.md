@@ -21,6 +21,11 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-03-22
+
+- 增加[SaaS](工具链/SaaS.md)支持
+
+
 ## 2017-03-21
 
 - 增加分页相关的POJO抽象定义
