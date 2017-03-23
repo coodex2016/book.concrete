@@ -39,6 +39,7 @@ concrete.properties配置
 
 okHttp3.properties
     
+    # 所有可被访问的域需要在此列出
     _server_ = 
     _server_.ssl = 
 
