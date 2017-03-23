@@ -2,13 +2,34 @@
   "gitbook": "3.*.*",
   "title": "Concrete手册",
   "author": "Shen Hainan<jujus.shen@126.com>",
-  "plugins": ["mermaid-gb3","tbfed-pagefooter"],
+  "links": {
+    "sidebar": {
+      "coodex.org": "http://coodex.org"
+    }
+  },
+  "plugins": [
+    "donate",
+    "mermaid-gb3",
+    "tbfed-pagefooter",
+    "github",
+    "toggle-chapters",
+    "anchors"
+  ],
   "language": "zh-hans",
   "pluginsConfig": {
+    "donate": {
+      "wechat": "/images/donate_wechat.png",
+      "alipay": "/images/donate_alipay.png",
+      "button": "好哒",
+      "title": "<strong><font size='7'>壕</font>，请用<font size='5'>金钱</font>尽情<font size='6'>羞辱</font>我<font size='7'>！</font></strong>"
+    },
     "tbfed-pagefooter": {
-      "copyright":"&copy coodex.cc 2016",
+      "copyright": "&copy coodex.org 2016",
       "modify_label": "修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "github":{
+      "url":"https://github.com/coodex2016/concrete.coodex.org"
     }
   }
 }
