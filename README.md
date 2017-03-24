@@ -21,6 +21,19 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-03-24
+
+- concrete-core 增加ConcreteCache对象，用来解决需要定期失效的缓存数据模型，例如：当实时性要求不高时，用户的角色可以缓存下来，10分钟后再重新加载新的角色，减小数据获取的开销
+```properties
+# concrete.properties
+# 线程池大小，根据具体应用的负载考虑，默认为1
+cache.thread.pool.size=1
+# 缓存对象生命周期，默认10分钟。也可以通过构造函数自行传入单位和时限
+cache.object.life=10
+```
+
+
+
 ## 2017-03-22
 
 - 增加[SaaS](工具链/SaaS.md)支持
