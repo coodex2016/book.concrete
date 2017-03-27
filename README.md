@@ -21,6 +21,29 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-03-27
+
+- 调整客户端访问机制，定义SSLContextFactory接口，提供部分实现
+    - JSSEDefaultSSLContextFactory: 生产JSSE的默认SSLContext
+    - AllTrustedSSLContextFactory：信任所有server端证书，不建议使用，中间人攻击数据泄漏的哗哗的
+    - X509CertsSSLContextFactory：cocnrete默认实现，只信任指定资源目录下的证书
+        ```properties
+        # concrete.properties
+        
+        # 默认路径
+        trusted.certs.path
+        
+        # 各domain的资源路径, domain全小写
+        # trusted.certs.path.domain(.port), 例如：
+        trusted.certs.path.example.coodex.org
+        ```
+        参考InsertCerts.java 提供工具方法
+        ```java
+        X509CertsSSLContextFactory.saveCertificateFromServer(String host, int port, String storePath)
+        ```
+        获取指定host port的证书
+         
+
 ## 2017-03-25
 - 作废CommonRepository接口。这是一个草率的设计，不推荐。对于大部分系统都会采用读写分离，应该从设计上就明确区分出A仓库和T仓库，A仓库不应该有CUD，T仓库不应该支持动态查询，防止程序误用。
 

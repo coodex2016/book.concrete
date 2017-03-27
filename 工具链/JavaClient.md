@@ -41,7 +41,8 @@ okHttp3.properties
     
     # 所有可被访问的域需要在此列出
     _server_ = 
-    _server_.ssl = 
+    # 2017.03.27 sslContext移除
+    # _server_.ssl =  
 
 ## 2017-03-09
 
