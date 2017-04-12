@@ -43,6 +43,17 @@ https://github.com/coodex2016/concrete.coodex.org
         ```
         获取指定host port的证书
          
+## 2017-04-12
+- 增加Limiting注解，定义业务限流接口，保障系统的可用性
+- 提供最大业务并发量模型的默认实现，后续扩展令牌桶、漏桶模型的默认实现
+    - 策略配置文件 limiting.maximum.concurrency.properties
+    ```properties
+      # 默认策略的最大业务并发量
+      max
+      # 指定策略的最大业务并发量
+      strategyName.max
+    ```
+- [api工具](工具链/API.md)增加angular支持，支持angular2+
 
 ## 2017-03-25
 - 作废CommonRepository接口。这是一个草率的设计，不推荐。对于大部分系统都会采用读写分离，应该从设计上就明确区分出A仓库和T仓库，A仓库不应该有CUD，T仓库不应该支持动态查询，防止程序误用。

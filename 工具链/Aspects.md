@@ -5,12 +5,25 @@
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 ```
 
-Concrete工具链提供了3种切片来支持Concrete的定义。
+Concrete工具链提供了~~3~~4种切片来支持Concrete的定义。
 
 ## RBAC
 
 ```xml
     <bean class="org.coodex.concrete.spring.aspects.RBAC_Aspect"></bean>
+```
+
+## 最大并发业务量 Limiting
+```xml
+    <bean class="org.coodex.concrete.spring.aspects.MaximumConcurrencyAspect"></bean>
+```
+
+limiting.maximum.concurrency.properties
+```properties
+# 默认策略的最大业务并发量
+max
+# 指定策略的最大业务并发量
+strategyName.max
 ```
 
 ## Bean Validation
@@ -85,6 +98,7 @@ Concrete工具链提供了3种切片来支持Concrete的定义。
                 <bean class="org.coodex.concrete.core.intercept.BeanValidationInterceptor"></bean>
                 <bean class="org.coodex.concrete.core.intercept.RBACInterceptor"></bean>
                 <bean class="org.coodex.concrete.core.intercept.ServiceTimingInterceptor"></bean>
+                <bean class="org.coodex.concrete.core.intercept.MaximumConcurrencyInterceptor"></bean>
             </list>
         </constructor-arg>
     </bean>
