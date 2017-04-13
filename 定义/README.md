@@ -2,7 +2,7 @@
 
 ```java
 @MicroService
-public interface SomeService implements ConcreteService{
+public interface SomeService extends ConcreteService{
     
     @AccessAllow
     String someMethod();
