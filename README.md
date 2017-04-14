@@ -21,6 +21,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-04-14
+
+- JaxRS支持：取消只有1个POJO的限制。文档、客户端工具链同步更新
+
 ## 2017-04-13
 
 - 修复生成文档时，泛型服务的POJO类型继承问题
