@@ -1,12 +1,8 @@
 # Java客户端调用
 
-Concrete 工具链默认提供了以下两个实现。
-```xml
-    <dependency>
-        <groupId>org.coodex</groupId>
-        <artifactId>concrete-jaxrs-serializer-fastjson</artifactId>
-    </dependency>
+Concrete 工具链默认提供了以下~~两个~~实现，如未指定invoker则使用JaxRS Client。
 
+```xml
     <dependency>
         <groupId>org.coodex</groupId>
         <artifactId>concrete-jaxrs-invoker-okhttp3</artifactId>
@@ -14,6 +10,12 @@ Concrete 工具链默认提供了以下两个实现。
 ```
 
 concrete.properties配置
+
+    # 默认utf-8
+    # global
+    jaxrs.client.charset = 
+    # or
+    jaxrs.client.charset.domain =
 
     concrete.serviceRoot = 
     # 或者
@@ -37,6 +39,7 @@ concrete.properties配置
 
 如果serviceRoot为local，则直接调用本地服务
 
+## okHttp3配置
 okHttp3.properties
     
     # 所有可被访问的域需要在此列出

@@ -21,6 +21,15 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-04-15
+
+- jaxrs 339增加字符集配置，concrete.properties ```jaxrs.charset```, 默认utf8       
+- 重构javaClient，调整机制，简化client端构建
+    - 提供基于JaxRS Client的默认InvokerFactory
+    - 移除serializer-fastjson包，将其作为默认的serializer实现
+    - 支持字符集设定，参见[Java客户端调用](工具链/JavaClient.md)
+
+
 ## 2017-04-14
 
 - JaxRS支持：取消只有1个POJO的限制。文档、客户端工具链同步更新
