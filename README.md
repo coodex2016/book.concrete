@@ -21,7 +21,7 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
-## 2017-04-18
+## 2017-04-19
 
 - 修复JavassistHelper的一个缺陷，重构至concrete-core中
 - coodex-utilities中定义了一个[计数模型](工具链/counter.md)，目的：数据随时产生随时统计或统计预处理，不需要所有的统计都到数据库里去算，分段统计快照，提高统计效率
