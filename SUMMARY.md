@@ -10,6 +10,7 @@
     * [AbstractErrorCodes](定义/AbstractErrorCodes.md)
     * [@ErrorMsg](定义/ErrorMsg.md)
     * [@Description](定义/Description.md)
+    * [@Signable](定义/Signable.md)
 
 * [工具链](工具链/README.md)
     * [BeanProvider](工具链/beanProvider.md)

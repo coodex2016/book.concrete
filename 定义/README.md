@@ -23,4 +23,5 @@ public interface SomeService extends ConcreteService{
 | [AbstractErrorCode](AbstractErrorCodes.md) | 定义服务的错误信息 |
 | [@ErrorMsg](ErrorMsg.md) | 定义错误的表现形式 |
 | [@Description](Description.md) | 用来定义服务模块或服务原子文档化时的信息 |
+| [@Signable](Signable.md) | 签名验签 |
 
