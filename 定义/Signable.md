@@ -66,3 +66,6 @@ resource:
 
 服务端建议自行实现RSAKeyStore
 
+### Interceptor
+
+`org.coodex.concrete.core.intercept.JaxRSSignatureInterceptor`
