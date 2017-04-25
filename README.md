@@ -21,6 +21,16 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-04-25
+
+- JaxRS模块增加PathParam和RouteBy的检查
+- 增加请求附加信息[Subjoin](定义/Subjoin.md)，在jaxrs模块中利用Header实现
+- api/core部分少量接口、工具调整package
+- 增加可签名[Signable](定义/Signable.md)注解，用于定义模块或者单元是否需要签名
+- 调整ConcreteSPIFacade机制，除了ServiceLoader加载的providers外，还会把所有该类型的bean加载进来
+- 修改Spring切片支持方式，AbstractConcreteInterceptor增加泛型参数，只需要指定其泛型，并增加Aspect注解即可；移除原切片原子的设计
+
+
 ## 2017-04-19
 
 - 修复JavassistHelper的一个缺陷，重构至concrete-core中
