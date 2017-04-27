@@ -21,6 +21,15 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-04-27
+
+- 重构SPIFacade，更名为ServiceLoader/ConcreteServiceLoader/AcceptableServiceLoader
+- 统一部分混乱的代码
+- 增加多AccountFactory支持
+    - 规划id，分别实现AcceptableAccountFactory
+    - 注册AccountFactoryAggregation(多AccountFactory聚合)和AccountFactoryAggregationFilter(AccountFactory冲突解决方案)
+    
+
 ## 2017-04-25
 
 - JaxRS模块增加PathParam和RouteBy的检查
