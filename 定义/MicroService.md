@@ -28,9 +28,10 @@
 ## 注解在方法上
 
 因为ConcreteService的所有方法默认均为服务原子，因此，@MicroService的作用更多用于更改方法的服务名。
-例如：
-在Concrete自带工具链jax-rs支持中，默认new为PUT方法的谓词，而new是java的关键字，无法定义new()的接口，可以如下定义：
+~~例如：
+在Concrete自带工具链jax-rs支持中，默认new为PUT方法的谓词，而new是java的关键字，无法定义new()的接口，可以如下定义：~~
 ```java
-    @MicroService("new")
-    POJOType newObject();
+    // 已失效
+    // @MicroService("new")
+    // POJOType newObject();
 ```
