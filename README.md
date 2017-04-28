@@ -24,6 +24,19 @@ https://github.com/coodex2016/concrete.coodex.org
 ## 2017-04-28
 
 - 调整jaxrs的谓词规则，基于java方法名
+- 修改RBAC
+    - 行期调整acl基于**moduleName**.properties的methodName.methodParamCount
+    - AccessAllow可以定于与类型上
+- 修复ServiceLoader泛型参数为变量类型问题
+- 增加Overlay注解，用于声明注解是否可被重载
+    - 可被重载(Domain, Limiting, Priority, ServiceTiming, Signable)时，上下文搜索优先级为：
+        - method
+        - moduleClass
+        - method.declaringClass
+    - 不可被重载(AccessAllow)时，上下文搜索优先级为
+        - method
+        - method.declaringClass    
+        - moduleClass
 
 ## 2017-04-27
 
