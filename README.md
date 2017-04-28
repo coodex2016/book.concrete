@@ -21,6 +21,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-04-28
+
+- 调整jaxrs的谓词规则，基于java方法名
+
 ## 2017-04-27
 
 - 重构SPIFacade，更名为ServiceLoader/ConcreteServiceLoader/AcceptableServiceLoader
