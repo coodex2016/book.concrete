@@ -37,6 +37,7 @@ https://github.com/coodex2016/concrete.coodex.org
         - method
         - method.declaringClass    
         - moduleClass
+- 调整继承链的支持方式
 
 ## 2017-04-27
 
