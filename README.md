@@ -21,6 +21,15 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-05-03
+
+- api-tools: 完善文档化输出方式；
+- api-tools: 修复pojo到自身类型引用时造成死循环的缺陷
+- api: 增加Safely注解，可被重载，用于定义服务是否需要可信账户才可访问，类似于taobao web使用cookie登录时，可以浏览部分内容，但是下单、支付等需要验证当前账户
+- core: rbac进行相应调整
+- coodex-utilities: Profile.getStrList会trim
+- 少量缺陷修改
+
 ## 2017-04-28
 
 - 调整jaxrs的谓词规则，基于java方法名
