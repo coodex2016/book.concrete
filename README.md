@@ -21,6 +21,13 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-05-08
+
+- core: 再次调整ConcreteServiceLoader机制，默认Provider可以通过interfaceClass.name.default进行指定
+- api: 增加OperationLog注解，用于定义模块如何渲染日志; 增加LogAtomic注解，用于定义服务原子如何记录日志
+- 工具链: 增加对操作日志的支持
+
+
 ## 2017-05-03
 
 - api-tools: 完善文档化输出方式；
