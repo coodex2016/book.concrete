@@ -21,6 +21,25 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-05-09
+
+- core: 调整ConcreteCache，支持不同的缓存策略，支持动态调整，重载getRule
+```properties
+# concrete.properties
+# 线程池大小，根据具体应用的负载考虑，默认为1
+cache.thread.pool.size=1
+# 缓存对象生命周期，默认10分钟。也可以通过构造函数自行传入单位和时限
+cache.object.life=10
+# 可自定义的rule，例如org.coodex.concrete.accounts.organization
+# 则，优先级为
+# org.coodex.concrete.accounts.organization.cache.object.life
+# org.coodex.concrete.accounts.cache.object.life
+# org.coodex.concrete.cache.object.life
+# org.coodex.cache.object.life
+# org.cache.object.life
+# cache.object.life
+```
+
 ## 2017-05-08
 
 - core: 再次调整ConcreteServiceLoader机制，默认Provider可以通过interfaceClass.name.default进行指定
