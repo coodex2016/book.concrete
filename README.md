@@ -40,6 +40,12 @@ cache.object.life=10
 # cache.object.life
 ```
 
+## 2017-05-10
+
+- api: 调整Overlay注解
+    - 增加overlay属性，false：declaringClass --> module; true: module --> declaringClass。默认true。不设置Overlay同false
+    - 增加definition属性，true: 仅作用于定义上, false:可通过具体服务原子实现进行重载。默认true
+
 ## 2017-05-08
 
 - core: 再次调整ConcreteServiceLoader机制，默认Provider可以通过interfaceClass.name.default进行指定

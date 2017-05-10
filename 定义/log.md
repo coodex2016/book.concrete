@@ -16,6 +16,7 @@ concrete 提供了两个注解定义操作日志的行为。
 | 属性 | 说明 |
 | --- | --- |
 | subClass | 操作日志子类 |
+| loggingType | ALWAYS: 不管LOGGING中是否有数据都进行记录, DATA: LOGGING中有数据才记录操作日志, NO: 不记录。默认DATA |
 | loggerClass | 如何持久化日志，非默认值时可覆盖OperationLog的loggerClass |
 
 ## 使用
@@ -42,8 +43,8 @@ public interface ServiceExample extends ConcreteService{
 ```java
     @Override
     public void logTest(){
-        // org.coodex.concrete.common.ConcreteContext.LOGGING
-        LOGGING.get().put("logTest", "ok");
+        // org.coodex.concrete.common.ConcreteContext.putLoggingData
+        putLoggingData("logTest", "ok");
     }
 
 ```
