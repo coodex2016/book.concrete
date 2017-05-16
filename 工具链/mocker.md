@@ -101,3 +101,11 @@ public class IdCardMocker extends AbstractMocker<IdCard> {
 
 模拟车牌号，可设置是否挂车、是否教练车、省份范围
 
+### concrete-api @MobilePhoneNum
+
+模拟手机号，appleStyle 为 true则返回 xxx-xxxx-xxxx
+
+### concrete-api @EMail
+
+模拟电子邮件地址，可设置domains，仅在domains中模拟
+
