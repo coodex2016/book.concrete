@@ -93,3 +93,11 @@ public class IdCardMocker extends AbstractMocker<IdCard> {
 
 模拟身份证号，可设定最大最小年龄（默认最小5，最大90）、性别（男，女，随机）、行政区划过滤、规格（15，18，随机）
 
+### concrete-api @DateTime
+
+模拟时间，可设置最大最小日期范围
+
+### concrete-api @VehicleNum
+
+模拟车牌号，可设置是否挂车、是否教练车、省份范围
+
