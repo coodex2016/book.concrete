@@ -65,7 +65,7 @@ public class IdCardMocker extends AbstractMocker<IdCard> {
 
 ## 已有Mock注解
 
-### @BYTE, @SHORT, @INTEGER, @LONG, @FLOAT, D@OUBLE
+### @BYTE, @SHORT, @INTEGER, @LONG, @FLOAT, @DOUBLE
 
 可指定最大值最小值
 
