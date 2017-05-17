@@ -11,15 +11,55 @@ https://github.com/coodex2016/concrete.coodex.org
 
 主要差别有
 
-|  | 0.1.0 | 0.2.0 |
+|  | 0.1.0 | 0.2.X |
 | --- | --- | --- |
 | 服务提供 | 基于Jaxrs，使用POST方法 | 贴近RESTFul风格，支持服务原子优先级 |
-| 客户端 | 基于sill，耦合了界面的一些元素，函数式调用 | 基于jQuery，对象式调用，Promise模式；提供java客户端 |
+| 客户端 | 基于sill，耦合了界面的一些元素，函数式调用 | 支持jQuery，对象式调用，Promise模式；支持Angular 2+；提供java客户端 |
 | 错误信息 | 无参数，前后端均需定义 | 支持模版，在设计中定义，根据客户端语言环境选择信息模版 |
 | api手册 | 前端手册，基于asciidoctor | 前后端分别提供手册，基于Gitbook |
 | 文档 | 无 | 这本就是 |
 
 ------
+
+## 2017-05-17
+
+- coodex-utilities: 调整关联策略模型，提供更方便的扩展方式
+
+```java
+public class IdCardRelation extends AbstractRelationPolicy {
+    @Override
+    public String[] getPolicyNames() {
+        return new String[]{ID_CARD_TO_SEX, ID_CARD_TO_BIRTHAY};
+    }
+
+    @RelationMethod(ID_CARD_TO_SEX)
+    public Integer toSex(String idCardNo){
+        if (idCardNo != null) {
+            switch (idCardNo.length()) {
+                case 15:
+                    return (idCardNo.charAt(14) - '0') % 2 == 0 ? 2 : 1;
+                case 18:
+                    return (idCardNo.charAt(16) - '0') % 2 == 0 ? 2 : 1;
+            }
+        }
+        return null;
+    }
+
+    @RelationMethod(ID_CARD_TO_BIRTHAY)
+    public String toBirthday(String idCardNo){
+        if (idCardNo != null) {
+            switch (idCardNo.length()) {
+                case 15:
+                    return "19" + idCardNo.substring(6, 12);
+                case 18:
+                    return idCardNo.substring(6, 14);
+            }
+        }
+        return null;
+    }
+
+}
+```
 
 ## 2017-05-16
 
