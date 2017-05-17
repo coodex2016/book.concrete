@@ -37,7 +37,28 @@ public static <T> T mock(final Method method, Class ... context);
     - int max(), 最大深度
 - @Relation，定义模拟关联，例如，性别属性关联自身份证号，则可以在性别属性上定义 `@Relation(properties = "身份证号")`
     - String[] properties()， 此属性所关联的属性集。当前版本仅支持同一POJO的属性
-    - Class<? extends RelationPolicy> policy()，怎么从关联的属性值中获得此属性的值
+    - ~~Class<? extends RelationPolicy> policy()，怎么从关联的属性值中获得此属性的值~~
+    - String policy(), 使用哪条策略进行关联
+
+### RelationPolicy 扩展示例
+```java
+public class CopyPolicy extends AbstractRelationPolicy {
+
+    public static final String POLICY_NAME = "copy";
+
+
+    @RelationMethod(POLICY_NAME)
+    public Object copy(Object o){
+        return o;
+    }
+
+    @Override
+    public String[] getPolicyNames() {
+        return new String[] {POLICY_NAME};
+    }
+}
+
+```
     
 ### @Mock
 
