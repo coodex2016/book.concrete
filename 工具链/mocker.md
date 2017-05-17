@@ -67,45 +67,47 @@ public class IdCardMocker extends AbstractMocker<IdCard> {
 
 ### @BYTE, @SHORT, @INTEGER, @LONG, @FLOAT, @DOUBLE
 
-可指定最大值最小值
+- 可指定最大值最小值
+- 可指定range，如指定了range，则随即返回range中数据
 
 ### @BOOLEAN
 
-50%几率随机true/false
+- 50%几率随机true/false
 
 ### @CHAR
 
-可定义字符范围，可通过mock.properties的default.chars.range设定默认范围
+- 可定义字符范围，可通过mock.properties的default.chars.range设定默认范围
 
 ### @STRING
 
-定义字符串的字符范围，可通过mock.properties的default.string.range设定默认范围
+- 定义字符串的字符范围，可通过mock.properties的default.string.range设定默认范围
+- 可指定range，如指定了range，则随即返回range中数据
 
 ### concrete-api @ID
 
-模拟id，支持String/Long/long
+- 模拟id，支持String/Long/long
 
 ### concrete-api @Name
 
-模拟中文姓名
+- 模拟中文姓名
 
 ### concrete-api @IdCard
 
-模拟身份证号，可设定最大最小年龄（默认最小5，最大90）、性别（男，女，随机）、行政区划过滤、规格（15，18，随机）
+- 模拟身份证号，可设定最大最小年龄（默认最小5，最大90）、性别（男，女，随机）、行政区划过滤、规格（15，18，随机）
 
 ### concrete-api @DateTime
 
-模拟时间，可设置最大最小日期范围
+- 模拟时间，可设置最大最小日期范围
 
 ### concrete-api @VehicleNum
 
-模拟车牌号，可设置是否挂车、是否教练车、省份范围
+- 模拟车牌号，可设置是否挂车、是否教练车、省份范围
 
 ### concrete-api @MobilePhoneNum
 
-模拟手机号，appleStyle 为 true则返回 xxx-xxxx-xxxx
+- 模拟手机号，appleStyle 为 true则返回 xxx-xxxx-xxxx
 
 ### concrete-api @EMail
 
-模拟电子邮件地址，可设置domains，仅在domains中模拟
+- 模拟电子邮件地址，可设置domains，仅在domains中模拟
 
