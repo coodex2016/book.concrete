@@ -82,6 +82,7 @@ public class IdCardMocker extends AbstractMocker<IdCard> {
 
 - 定义字符串的字符范围，可通过mock.properties的default.string.range设定默认范围
 - 可指定range，如指定了range，则随即返回range中数据
+- 可指定txt，如指定了txt，则在上下文中搜索资源，按行读取非空字符串作为range，资源文件应使用utf8编码
 
 ### concrete-api @ID
 
