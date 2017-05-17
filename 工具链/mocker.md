@@ -26,7 +26,7 @@ public static <T> T mock(final Method method, Class ... context);
 
 - @COLLECTION，定义数组、Collection类的大小
     - int[] size()， 数组，表示数组(Collection视作数组)各维度的大小，为-1则表示随机
-- @MAP，定义MAP模拟属性
+- @MAP，定义MAP模拟属性（在concrete中，**不推荐**使用Map的设计）
     - Class keyType()，未指定键值类型时可通过keyType定义
     - Class valueType()，未指定值类型时可通过valueType定义
     - Class keyMocker()，指定键使用什么样的方式模拟，使用该属性的此类型注
