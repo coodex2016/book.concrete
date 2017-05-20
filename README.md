@@ -26,6 +26,7 @@ https://github.com/coodex2016/concrete.coodex.org
 - 修复部分缺陷
 - api: 增加TokenEventListener, 通过ServiceLoader加载
 - api: [log](定义/log.md)注解进行调整
+- 添加[账户模块](帐号/README.md)，提供组织结构类型的账户管理框架及参考实现
 
 ## 2017-05-17
 
