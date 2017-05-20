@@ -21,6 +21,12 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-05-20
+
+- 修复部分缺陷
+- api: 增加TokenEventListener, 通过ServiceLoader加载
+- api: [log](定义/log.md)注解进行调整
+
 ## 2017-05-17
 
 - coodex-utilities: 调整关联策略模型，提供更方便的扩展方式

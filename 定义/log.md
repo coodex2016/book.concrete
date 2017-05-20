@@ -6,18 +6,20 @@ concrete 提供了两个注解定义操作日志的行为。
 
 | 属性 | 说明 |
 | --- | --- |
-| category | 操作日志分类 |
+| category | 操作日志分类，可由LogAtomic重载 |
 | formatterClass | 如何格式化，concrete工具链提供默认，推荐使用FreemarkerMessageFormatter |
 | patternLoaderClass | 模版如何获取，同ErrorCode，键值定义为category.subClass |
-| loggerClass | 如何持久化日志，优先级低于LogAtomic的loggerClass |
+| loggerClass | 如何持久化日志~~，优先级低于LogAtomic的loggerClass~~ |
 
 ## LogAtomic
 
 | 属性 | 说明 |
 | --- | --- |
+| category | 操作日志分类 |
 | subClass | 操作日志子类 |
+| message | 消息格式，如果以{开头,}结尾，则说明花括号中为messageTemplateKey |
 | loggingType | ALWAYS: 不管LOGGING中是否有数据都进行记录, DATA: LOGGING中有数据才记录操作日志, NO: 不记录。默认DATA |
-| loggerClass | 如何持久化日志，非默认值时可覆盖OperationLog的loggerClass |
+| ~~loggerClass~~ | ~~如何持久化日志，非默认值时可覆盖OperationLog的loggerClass~~ |
 
 ## 使用
 
