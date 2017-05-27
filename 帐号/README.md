@@ -4,6 +4,11 @@
     
     https://github.com/coodex2016/concrete-accounts
     
+## 多租户架构
+
+![image](tenantArchitechture.png)
+
+    
 ## 组织结构模型
 
 ### 模型

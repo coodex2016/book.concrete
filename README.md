@@ -21,6 +21,14 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-05-27
+
+- concrete.properties: 
+    - 增加 `concrete.api.packages`，用于声明当前应用所使用的api包
+    - 增加 `concrete.remoteapi.packages`，用于声明当前应用所使用的远端api包
+    - 增加 `concrete.appSet`，用于声明当前应用所属的应用集合
+- concrete-accounts: 增加对SaaS多租户模式的账户支持
+
 ## 2017-05-20
 
 - 修复部分缺陷
