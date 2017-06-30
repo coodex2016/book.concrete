@@ -21,6 +21,11 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-06-30
+   
+- 修复java client在Android环境中的问题：1、classloader机制不同导致的缺陷；2、因android正则表达式支持不完整，调整相关表达式
+- 根据v5哥的发现修改CorsFilter
+
 ## 2017-05-27
 
 - concrete.properties: 
