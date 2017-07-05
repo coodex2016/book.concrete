@@ -51,3 +51,34 @@ Spring applicationContext配置参见`organization-impl-reference/src/test/resou
 关于登录的扩展：抽象实现中提供了基于手机号、email、身份证号的登录逻辑，可通过扩展 AbstractLoginServiceImpl的`protected PE getAccountEntityBy(String account)`实现
 
 默认密码可以通过concrete.properties的defaultPassword重载，也可以通过实现并注册PasswordGenerator扩展
+
+## 简单账号
+
+一套基于profile提供账户的模型，支撑业务功能快速开发
+
+```properties
+# 放置在classpath的accounts目录下
+# 文件名即为用户id，例如coodex.properties，账户id为coodex
+name=Coodex
+roles=
+password=p@55w0rd
+# base32
+authKey=1234567890
+```
+
+### usage
+
+```xml
+<dependency>
+    <groupId>org.coodex</groupId>
+    <artifactId>concrete-accounts-simple-impl</artifactId>
+    <version>0.2.1-SNAPSHOT</version>
+</dependency>
+```
+
+```xml
+    <bean class="org.coodex.concrete.accounts.simple.impl.SimpleAccountFactory"/>
+    <!-- 示例登录实现 -->
+    <bean class="org.coodex.concrete.accounts.simple.impl.SimpleAccountLoginImpl"/>
+```
+

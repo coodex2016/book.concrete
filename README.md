@@ -21,6 +21,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-07-05
+
+- accounts模块增加一个简单实现，支撑业务功能快速开发，基于/accounts/***.properties提供账户
+
 ## 2017-06-30
    
 - 修复java client在Android环境中的问题：1、classloader机制不同导致的缺陷；2、因android正则表达式支持不完整，调整相关表达式
