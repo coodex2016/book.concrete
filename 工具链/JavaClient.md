@@ -2,6 +2,22 @@
 
 Concrete 工具链默认提供了以下~~两个~~实现，如未指定invoker则使用JaxRS Client。
 
+建议如下使用
+```xml
+    <dependency>
+        <groupId>org.coodex</groupId>
+        <artifactId>concrete-jaxrs-client</artifactId>
+    </dependency>
+    
+    <!-- 使用jersey作为jaxrs client的实现 -->
+    <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+    </dependency>
+
+```
+
+
 ```xml
     <dependency>
         <groupId>org.coodex</groupId>
@@ -26,13 +42,13 @@ concrete.properties配置
     ServiceExample serviceExample;
     
     // 使用concrete.serviceRoot
-    serviceExample = Client.getBean(ServiceExample.class);
+    serviceExample = Client.getInstance(ServiceExample.class);
 
     // 使用concrete.server.serviceRoot
-    serviceExample = Client.getBean(ServiceExample.class, "server");
+    serviceExample = Client.getInstance(ServiceExample.class, "server");
 
     // 使用 http://serverName
-    serviceExample = Client.getBean(ServiceExample.class, "http://serverName");
+    serviceExample = Client.getInstance(ServiceExample.class, "http://serverName");
 ```
 
 一样的，JavaClient也支持数据模拟，即，无server并行开发，增加java参数`-Dorg.coodex.concrete.jaxrs.devMode=true`

@@ -21,6 +21,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-07-13
+
+- 修改java client的接口名 getBean --> getInstance，getBean在0.2.2移除
+
 ## 2017-07-05
 
 - accounts模块增加一个简单实现，支撑业务功能快速开发，基于/accounts/***.properties提供账户
