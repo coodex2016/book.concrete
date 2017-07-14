@@ -21,6 +21,11 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-07-14
+
+- 修改jaxrs谓词规则，匹配谓词时，依长度优先，同长度则PUT > DELETE > POST > GET
+
+
 ## 2017-07-13
 
 - 修改java client的接口名 getBean --> getInstance，getBean在0.2.2移除
