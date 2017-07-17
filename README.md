@@ -21,6 +21,14 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+
+## 2017-07-17
+
+- coodex-utilities: 修复random低级错误
+- 增加明确的AccountID接口，需要提供序列化方法。定义AccountIDDeserializer，用于反序列化AccountID，方便其他数据到Account的关联，例如：操作日志，AccountMappingProfile(近期增加，用于外部系统关联到系统账户，如微信等)
+    - concrete-account实现:AccountIDImpl，AccountIDImplDeserializer
+
+
 ## 2017-07-14
 
 - 修改jaxrs谓词规则，匹配谓词时，依长度优先，同长度则PUT > DELETE > POST > GET
