@@ -21,6 +21,68 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-07-21
+
+- concrete-core: Assert支持直接使用String抛出异常
+- concrete-commons-spring-data
+    - 增加SpecificationsMaker接口，方便从业务代码中剥离动态查询参数构建
+    - 增加AbstractSpecificationMaker，支持同一个查询条件的多种构建方式
+
+例如：
+```java
+// 原代码
+
+ConditionType c = pageRequest.getCondition();
+
+Specifications<EntityType> spec = null;
+if(c.someProperties() != null){
+    spec = SpecCommon.someOperator(spec, ....);
+}
+
+....
+
+return PageHelper.copy(repo.findAll(spec, pageParam), copier);
+
+// 现代码
+@Inject
+private SpecicationsMaker<EntityType, ConditionType> maker;
+
+
+return PageHelper.copy(repo.findAll(maker.make(pageRequest.getCondition()), pageParam), copier);
+
+```
+
+AbstractSpecificationsMaker用法
+
+```java
+public class SomeMaker extends AbstractSpecificationsMaker<EntityType, ConditionType>{
+    
+    // 名称为buildFor1
+    public Specifications<EntityType> buildFor1(ConditionType conditionType){
+        ....
+    }
+    
+    // 名称为buildFor2
+    @MakerFunction("buildFor2")
+    public Specifications<EntityType> xxxx(ConditionType conditionType){
+        ....
+    }
+}
+
+// 业务代码
+
+@Inject
+private AbstractSpecificationsMaker<EntityType, ConditionType> maker;
+
+
+//业务场景1
+return PageHelper.copy(repo.findAll(maker.make(pageRequest.getCondition(), "buildFor1"), pageParam), copier);
+
+//业务场景2
+return PageHelper.copy(repo.findAll(maker.make(pageRequest.getCondition(), "buildFor2"), pageParam), copier);
+
+```
+
 
 ## 2017-07-17
 
