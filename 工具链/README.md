@@ -97,7 +97,9 @@ public interface Example extends ConcreteService /* API必须是一个ConcreteSe
 ### step 2.5， 跑起来看看
 
 > 在api的test作用域【非必须】中依赖jeresy(jsr-339实现)、spring(jsr-330支持)、spring-boot(微服务、快速构建)、concrete的部分工具链
+
 > 在api的test作用域这么干主要是为了偷懒，大家不要学我！大家不要学我！大家不要学我！
+
 > 还有，这个过程只是为了演示一下，实际应用中切不可照抄照搬，一定要灵活运用！一定要灵活运用！一定要灵活运用！
 
 ```xml
@@ -122,7 +124,9 @@ public interface Example extends ConcreteService /* API必须是一个ConcreteSe
         </dependency>
 ```
 
-> 
+> spring boot的一个示例
+
+
 ```java
 package org.coodex.demo.one;
 
@@ -364,3 +368,6 @@ angular/doc相关的，可以自己体验，需要说明的是，doc工具是基
 
 :D
 
+### step 4
+
+to be continue, RxJava2 support in action ....
