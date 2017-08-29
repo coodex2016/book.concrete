@@ -21,6 +21,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-08-29
+
+增加演示构建过程示例
+
 ## 2017-07-21
 
 - concrete-core: Assert支持直接使用String抛出异常
