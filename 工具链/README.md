@@ -245,6 +245,7 @@ ok，来看看客户端
         </dependency>
 ```
 
+> 客户端调用演示
 
 ```java
 package org.coodex.demo.one.client;
@@ -286,7 +287,9 @@ public class ClientExample {
 ```
 
 > 为了省事，演示过程使用spring boot web来跑前端，不是必须！不是必须！不是必须！
+
 > 简单改造下
+
 ```java
 public class ServiceStart extends SpringBootServletInitializer{ //继承自SpringBootServletInitializer
     ///....
@@ -317,6 +320,7 @@ public class JQueryClientTool {
 ```
 
 创建index.html
+
 ```html
 <html>
 <head>
