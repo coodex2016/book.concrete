@@ -93,7 +93,6 @@ concrete.client._server_.async=
 ```
 
 2. 生成RX api
-
 ```java
         API.generate(ReactiveStreamsRender.RENDER_NAME,
                 apiRootPath,
@@ -101,7 +100,6 @@ concrete.client._server_.async=
 ```
 
 3. 使用
-
 ```java
     ServiceExample_RX rx = RXClient.getInstance(ServiceExample_RX.class, domain);
 
