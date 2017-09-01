@@ -21,6 +21,19 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-01
+
+- 增加对rxjava2的支持
+    - [X] 增加concrete-rx包（呃。。。虽然就一个注解。。。)
+    - [X] concrete-api-tools增加ConcreteService转RXService工具
+    - [X] 增加ConcreteSyncInterceptor，修改原ConcreteInterceptor接口，将invoke和around移至ConcreteSyncInterceptor
+    - [X] 增加AbstractSyncInterceptor，修改原AbstractSyncInterceptor，将invoke和around移至AbstractSyncInterceptor
+    - [ ] TODO: 改造SignatureInterceptor支持异步
+    - [X] 增加concrete-rx-client，客户端支持响应式编程
+    - [X] 增加concrete-jaxrs-client-rx，将concrete-jaxrs-client转成rx，参见[JavaClient](工具链/JavaClient.md)
+    - [ ] TODO: 增加concrete-support-jms，支持通过jms提供异步服务
+    - [ ] TODO: 增加concrete-jms-rx-client
+
 ## 2017-08-29
 
 增加演示构建过程示例

@@ -1,5 +1,7 @@
 # Java客户端调用
 
+> 2017-09-01 增加RXJava2的支持，往下翻
+
 Concrete 工具链默认提供了以下~~两个~~实现，如未指定invoker则使用JaxRS Client。
 
 建议如下使用
@@ -17,7 +19,7 @@ Concrete 工具链默认提供了以下~~两个~~实现，如未指定invoker则
 
 ```
 
-
+【不推荐，原因嘛。。。】
 ```xml
     <dependency>
         <groupId>org.coodex</groupId>
@@ -33,18 +35,18 @@ concrete.properties配置
     # or
     jaxrs.client.charset.domain =
 
-    concrete.serviceRoot = 
+    concrete.client.domain = 
     # 或者
-    concrete._server_.serviceRoot = 
+    concrete.client._server_.domain = 
 
 
 ```java
     ServiceExample serviceExample;
     
-    // 使用concrete.serviceRoot
+    // 使用concrete.client.domain
     serviceExample = Client.getInstance(ServiceExample.class);
 
-    // 使用concrete.server.serviceRoot
+    // 使用concrete.client.server.domain
     serviceExample = Client.getInstance(ServiceExample.class, "server");
 
     // 使用 http://serverName
@@ -53,9 +55,83 @@ concrete.properties配置
 
 一样的，JavaClient也支持数据模拟，即，无server并行开发，增加java参数`-Dorg.coodex.concrete.jaxrs.devMode=true`
 
-如果serviceRoot为local，则直接调用本地服务
+如果domain为local，则直接调用本地服务
 
-## okHttp3配置
+## RXClient
+
+concrete.properties配置
+
+
+
+### jaxrs client to rx client
+
+```properties
+## domain identify
+concrete.client.domain=
+## or
+concrete.client._server_.domain=
+
+## identify的调用类型，为后续jms等异步服务预留
+concrete.client.type=
+## or
+concrete.client._server_.type=
+
+## 调用identify是否异步，默认为true
+concrete.client.async=
+##
+concrete.client._server_.async=
+
+
+```
+
+1. 增加依赖
+```xml
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-jaxrs-client-rx</artifactId>
+        </dependency>
+```
+
+2. 生成RX api
+
+```java
+        API.generate(ReactiveStreamsRender.RENDER_NAME,
+                apiRootPath,
+                ServiceExample.class.getPackage().getName());
+```
+
+3. 使用
+
+```java
+    ServiceExample_RX rx = RXClient.getInstance(ServiceExample_RX.class, domain);
+
+    rx.all().subscribe(new Observer<List<Book>>() {
+        @Override
+        public void onSubscribe(Disposable d) {
+        }
+
+        @Override
+        public void onNext(List<Book> books) {
+            for (Book book : books) {
+                System.out.println(book);
+            }
+        }
+
+        @Override
+        public void onError(Throwable e) {
+            e.printStackTrace();
+        }
+
+        @Override
+        public void onComplete() {
+            System.out.println("complete");
+        }
+    });
+```
+
+
+
+## okHttp3配置【不推荐】
 okHttp3.properties
     
     # 所有可被访问的域需要在此列出
