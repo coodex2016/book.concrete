@@ -21,16 +21,35 @@ paperName 默认为空，对签名进行分类，通过`signature.properties`来
 algorithm 签名算法，默认SHA256withRSA，优先级低于`signature.properties`的配置
 serializer 序列化对象，默认使用concrete工具链提供的序列化算法(按键字典序 键=值模式拼接 urlEncode)
 
-
 ## 工具链
 
-工具链提供了默认的支持
-算法支持：HmacXXX/XXXwithRSA，默认SHA256withRSA
+    工具链提供了默认的支持
 
-可自行`org.coodex.concrete.core.signature.HmacKeyStore`/`org.coodex.concrete.core.signature.RSAKeyStore`
+### 关于signature.properties
+
+    signature.properties是工具链中约定重载Signable相关属性的属性文件
+
+- 重载algorithm等键值
+
+因各系统对算法、签名、干扰、客户key的定义不一样，可以通过signature.properties进行重载
+
+例如：
+
+```properties
+property.sign=signature
+property.keyId=appId
+property.noise=disturb
+property.algorithm=al
+```
+
+### 算法支持
+
+    默认支持支持HmacXXX/XXXwithRSA，默认SHA256withRSA
+
+可自行重载`org.coodex.concrete.core.signature.HmacKeyStore`/`org.coodex.concrete.core.signature.RSAKeyStore`
 默认的KeyStore规则如下
 
-### HmacKeyStore 默认实现
+#### HmacKeyStore 默认实现
 
 `signature.properties`
 
@@ -41,7 +60,7 @@ key明文配置，配置优先级：
 `hmacKey`
 
 
-### RSAKeyStore 默认实现
+#### RSAKeyStore 默认实现
 
 `signature.properties`
 
