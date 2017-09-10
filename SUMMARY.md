@@ -22,6 +22,7 @@
     * [服务端支持](工具链/server-side.md)
         * [JSR311 JAX-RS 1.1](工具链/jsr311.md)
         * [JSR339 JAX-RS 2.0](工具链/jsr339.md)
+        * [JSR356 WEBSOCKET](工具链/jsr356.md)
     * [ResourceBundlesMessagePatternLoader](工具链/ResourceBundlesMessagePatternLoader.md)
     * [JavaTextFormatMessageFormatter](工具链/JavaTextFormatMessageFormatter.md)
     * [插件.FreemarkerMessageFormatter](工具链/FreemarkerMessageFormatter.md)

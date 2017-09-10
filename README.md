@@ -21,6 +21,17 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-10
+
+- 调整jsr339的线程池配置，考虑到其他服务支持方式都可以使用同一个业务线程池，将其移至concrete-core，配置项 `service.executor.corePoolSize` \ `service.executor.maximumPoolSize`
+- 增加jsr356 websocket的支持
+- 增加websocket rxjava客户端支持
+- 结合rxjava，调整AbstractSignatureInterceptor的模式，废弃JaxRSSignatureInterceptor，使用org.coodex.concrete.core.intercept.SignatureInterceptor替代
+- 结合rxjava，增加异步拦截器链
+- 废弃0901的想法，JMS不适合支持concrete异步服务
+- some bugs fixed
+- todo: concrete-api-tools 增加websocket jquery支持/websocket angular支持
+
 ## 2017-09-01
 
 - 增加对rxjava2的支持
@@ -28,11 +39,11 @@ https://github.com/coodex2016/concrete.coodex.org
     - [X] concrete-api-tools增加ConcreteService转RXService工具
     - [X] 增加ConcreteSyncInterceptor，修改原ConcreteInterceptor接口，将invoke和around移至ConcreteSyncInterceptor
     - [X] 增加AbstractSyncInterceptor，修改原AbstractSyncInterceptor，将invoke和around移至AbstractSyncInterceptor
-    - [ ] TODO: 改造SignatureInterceptor支持异步
+    - [X] 改造SignatureInterceptor支持异步
     - [X] 增加concrete-rx-client，客户端支持响应式编程
     - [X] 增加concrete-jaxrs-client-rx，将concrete-jaxrs-client转成rx，参见[JavaClient](工具链/JavaClient.md)
-    - [ ] TODO: 增加concrete-support-jms，支持通过jms提供异步服务
-    - [ ] TODO: 增加concrete-jms-rx-client
+    - [ ] 废弃: 增加concrete-support-jms，支持通过jms提供异步服务
+    - [ ] 废弃: 增加concrete-jms-rx-client
 
 ## 2017-08-29
 

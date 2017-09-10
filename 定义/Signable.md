@@ -54,9 +54,9 @@ property.algorithm=al
 `signature.properties`
 
 key明文配置，配置优先级：
-`hmacKey.paperName.keyId`
-`hmacKey.paperName`
-`hmacKey.keyId`
+`hmacKey.paperName.keyId` >
+`hmacKey.paperName` >
+`hmacKey.keyId` >
 `hmacKey`
 
 
@@ -65,21 +65,21 @@ key明文配置，配置优先级：
 `signature.properties`
 
 私钥配置使用base64编码，优先级
-`rsa.privateKey.paperName.keyId`
-`rsa.privateKey.paperName`
-`rsa.privateKey.keyId`
+`rsa.privateKey.paperName.keyId` >
+`rsa.privateKey.paperName` >
+`rsa.privateKey.keyId` >
 `rsa.privateKey`
 resource:
-`paperName.keyId.pem`
+`paperName.keyId.pem` >
 `paperName.pem`
 
 公钥配置使用base64编码,优先级
-`rsa.publicKey.paperName.keyId`
-`rsa.publicKey.paperName`
-`rsa.publicKey.keyId`
+`rsa.publicKey.paperName.keyId` >
+`rsa.publicKey.paperName` >
+`rsa.publicKey.keyId` >
 `rsa.publicKey`
 resource:
-`paperName.keyId.crt`
+`paperName.keyId.crt` >
 `paperName.crt`
 
 
@@ -87,4 +87,7 @@ resource:
 
 ### Interceptor
 
-`org.coodex.concrete.core.intercept.JaxRSSignatureInterceptor`
+
+`org.coodex.concrete.core.intercept.JaxRSSignatureInterceptor`【已废弃】
+
+`org.coodex.concrete.core.intercept.SignatureInterceptor`
