@@ -21,6 +21,16 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-11
+
+- concrete-api-tools增加websocket jquery支持，使用方式同jaxrs的jquery支持。不同点：
+    - configuration增加onBroadcast(msgId, hostId, subject, content)属性，用来处理服务端的广播
+- websocket java client增加BroadcastListener，用于处理服务端广播，支持ServiceLoader机制加载lisenter，也支持`org.coodex.concrete.websocket.WebSocket.addBroadcastListener`
+- 服务端支持确定广播调用模式，如下：
+```java
+WebSocket.getEndPoint("/WebSocket"/* websocket的ServerEndpoint */).broadcast(subject, message);
+```
+
 ## 2017-09-10
 
 - 调整jsr339的线程池配置，考虑到其他服务支持方式都可以使用同一个业务线程池，将其移至concrete-core，配置项 `service.executor.corePoolSize` \ `service.executor.maximumPoolSize`
