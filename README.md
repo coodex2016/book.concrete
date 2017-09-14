@@ -23,6 +23,7 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ## 2017-09-14
 
+- ConcreteWebSocketEndPoint 增加 getToken(Session session)接口，方便基于token的过滤
 - concrete-api-tools增加websocket angular支持，使用方式同jaxrs的angular支持。不同点：
     - 增加Broadcast工具类，用于处理服务端广播
 ```typescript
@@ -31,6 +32,7 @@ https://github.com/coodex2016/concrete.coodex.org
       () => {},
       () => {}));
 ```
+
 
 ## 2017-09-11
 
