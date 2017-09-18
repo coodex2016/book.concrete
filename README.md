@@ -21,6 +21,26 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-18
+
+- coodex-utilities: 增加org.coodex.util.Parameter注解，用于声明参数名称，降低客户端与服务端对jdk特性的依赖
+```java
+    @Description(name = "帐号登录")
+    String login(
+            @Parameter("account")
+            @BigString
+                    String account,
+            @Parameter("password")
+            @Description(name = "密码")
+            @BigString
+                    String password,
+            @Parameter("authCode")
+            @BigString
+                    String authCode);
+```
+- 附件模块修改api，增加Parameter注解
+- accounts修改api，增加Parameter注解
+
 ## 2017-09-14
 
 - ConcreteWebSocketEndPoint 增加 getToken(Session session)接口，方便基于token的过滤
