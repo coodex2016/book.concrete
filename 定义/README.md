@@ -5,7 +5,7 @@
 public interface SomeService extends ConcreteService{
     
     @AccessAllow
-    String someMethod();
+    String someMethod(@Parameter("paramName") String paramName);
     
 }
 ```

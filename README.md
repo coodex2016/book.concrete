@@ -21,6 +21,12 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-20
+
+- concrete-core: 移除对fastjson的依赖，默认JSONSerializer还是FastJsonSerializer，通过反射引用。可能引起的问题，之前使用默认JSONSerializer的项目需要自行引入fastjson依赖
+- 增加:concrete-serializer-jackson2，提供基于jasckson2的JsonSerializer
+- 增加:concrete-serializer-jsonb-jdk8，提供基于JSR 367 json-bind规范的JsonSerializer,JDK8以上支持
+- 修复原先不规范、基于FastJson特性的缺陷代码
 ## 2017-09-18
 
 - coodex-utilities: 增加org.coodex.util.Parameter注解，用于声明参数名称，降低客户端与服务端对jdk特性的依赖
