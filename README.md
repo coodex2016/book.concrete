@@ -21,6 +21,31 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-24
+
+- concrete-api: 增加Caller接口，方便业务获取调用者信息
+```java
+    @Inject
+    private Caller caller;
+
+    // .....
+    public void someMethod(){
+        caller.getAddress();// 调用者地址
+        caller.getAgent();
+    }
+```
+- concrete-core: 修改业务服务上下文机制，大量减少了闭包对象的创建，方便后续扩展
+- concrete-core-spring: 增加ConcreteSpringConfiguration，封装Token、Caller、Subjoin的单例bean
+```xml 
+<!-- 主配置文件中使用 -->
+<bean class="org.coodex.concrete.spring.ConcreteSpringConfiguration"></bean>
+```
+或
+```java
+//主配置class中增加注解
+@Import(ConcreteSpringConfiguration.class)
+```
+
 ## 2017-09-20
 
 - concrete-core: 移除对fastjson的依赖，默认JSONSerializer还是FastJsonSerializer，通过反射引用。可能引起的问题，之前使用默认JSONSerializer的项目需要自行引入fastjson依赖
