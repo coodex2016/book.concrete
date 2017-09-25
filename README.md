@@ -21,6 +21,13 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-25
+
+- 实现webSocket caller的获取方式 - -#
+    - org.coodex.concrete.support.websocket.CallerHackFilter 负责在客户端第一次请求时将调用者信息保存在httpSession中
+    - org.coodex.concrete.support.websocket.CallerHackConfigurator 负责从HttpSession中的Caller放入到WebSocket的Session中
+    - 使用时，1、配置Filter map WebSocket的EndPoint url；2、为ServerEndpoint指定CallerHackConfigurator
+
 ## 2017-09-24
 
 - concrete-api: 增加Caller接口，方便业务获取调用者信息
