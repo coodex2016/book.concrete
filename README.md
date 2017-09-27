@@ -21,6 +21,12 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-09-27
+
+- jaxrs: 
+    - 修正字符串返回值不规范的用法，调整为：若返回值为字符串时，content-type为text/plain
+    - 同步调整jaxrs-client/jquery api tool/ angular api tool
+
 ## 2017-09-25
 
 - 实现webSocket caller的获取方式 - -#
