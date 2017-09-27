@@ -373,7 +373,7 @@ cache.object.life=10
 
 ## 2017-04-15
 
-- jaxrs 339增加字符集配置，concrete.properties ```jaxrs.charset```, 默认utf8       
+- jaxrs 339增加字符集配置，concrete.properties ```jsr339.charset```, 默认utf8       
 - 重构javaClient，调整机制，简化client端构建
     - 提供基于JaxRS Client的默认InvokerFactory
     - 移除serializer-fastjson包，将其作为默认的serializer实现
