@@ -25,7 +25,8 @@ https://github.com/coodex2016/concrete.coodex.org
 
 - jaxrs: 
     - 修正字符串返回值不规范的用法，调整为：若返回值为字符串时，content-type为text/plain
-    - 同步调整jaxrs-client/jquery api tool/ angular api tool
+    - 同步调整jaxrs-client/jquery jaxrs api tool/ angular jaxrs api tool
+    - angular用户需要注意，请删除 `AbstractConcreteService.ts` 重新生成api
 
 ## 2017-09-25
 
