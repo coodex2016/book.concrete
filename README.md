@@ -21,6 +21,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-10-16
+
+- bug fixed: 当服务产生异常时，sendError报The remote endpoint was in state [TEXT_FULL_WRITING] which is an invalid state for called method
+
 ## 2017-09-27
 
 - jaxrs: 
