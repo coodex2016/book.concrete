@@ -27,7 +27,7 @@ https://github.com/coodex2016/concrete.coodex.org
     - State在FSM中的操作是线程安全的
     - 自行定义FSM的状态转移
     - 以目标状态为视角，通过StateCondition确定是否可以从当前状态转移到目标状态
-    - 提供一个基于ConcreteServiceLoader的Provider
+    - 提供一个基于java动态代理和ConcreteServiceLoader的Provider
     - 示例：状态为仅包含一个数的模型，转移条件为从0-3循环，及0->1->2->3->0，Runner的main方法模拟300个线程并发进行状态迁移
     - 示例代码参见concrete-fms-impl的test代码 https://github.com/coodex2016/concrete.coodex.org/tree/0.2.1/11.concrete-fsm-impl/src/test
 
