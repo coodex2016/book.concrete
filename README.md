@@ -30,6 +30,10 @@ https://github.com/coodex2016/concrete.coodex.org
     - 提供一个基于java动态代理和ConcreteServiceLoader的Provider
     - 示例：状态为仅包含一个数的模型，转移条件为从0-3循环，及0->1->2->3->0，Runner的main方法模拟300个线程并发进行状态迁移
     - 示例代码参见concrete-fms-impl的test代码 https://github.com/coodex2016/concrete.coodex.org/tree/0.2.1/11.concrete-fsm-impl/src/test
+    - 目前的实现基于java动态代理，因此，有几个要求如下：
+        - State必须是个贫血模型，并且每个属性都可以set，用以达到事务控制；为了支持deepCopy，State还必须要有public无参数的构造方法
+        - 如果需要自身调用状态转移时，状态机需要继承AbstractFSM，并且使用getSelf()来执行状态转换
+        
 
 ## 2017-10-16
 
