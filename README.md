@@ -21,6 +21,52 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-11-18
+
+- 增加带信号的状态以及带信号的状态检测器，只需指定允许哪些信号状态进入即可，无需为每个状态转移编写StateCondition，简化开发
+
+```java
+package test.org.coodex.concrete.fsm.signaledfsm;
+
+import org.coodex.concrete.fsm.SignaledState;
+
+public class DemoSignaledState implements SignaledState {
+    private int value;
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public long getSignal() {
+        return value;
+    }
+}
+```
+
+```java
+package test.org.coodex.concrete.fsm.signaledfsm;
+
+import org.coodex.concrete.fsm.FiniteStateMachine;
+import org.coodex.concrete.fsm.SignaledGuard;
+
+public interface FSMDemo2 extends FiniteStateMachine<DemoSignaledState> {
+
+    @SignaledGuard(allowed = 3)
+    void toZero();
+    @SignaledGuard(allowed = 0)
+    void toOne();
+    @SignaledGuard(allowed = 1)
+    void toTwo();
+    @SignaledGuard(allowed = 2)
+    void toThree();
+}
+```
+
 ## 2017-11-17
 
 - 增加一个轻量级有限状态机框架
