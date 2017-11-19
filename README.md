@@ -21,6 +21,26 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-11-19
+
+- 多客户端共享token
+    - jaxrs支持不再通过cookie传递TokenId，使用Header
+    - websocket支持增加对tokenId的支持
+    - java client和RX client获取实例时，可以定制token的作用域，tokenManagerKey非空且相同的，则在client端共享token
+    - jQuery jaxrs/websocket 选用localStorage支持共享token，指定configuration.globalTokenKey非空且相同的共享token
+    - Angular jaxrs/websocket 选用localStorage支持共享token，指定RuntimeContext 的 globalTokenKey非空且相同的共享token
+- 修改Angular jaxrs/websocket指定服务位置的方式：指定RuntimeContext的root
+- 服务端跨域设置如下
+```properties
+    # cors_settings.properties
+    allowOrigin = *
+    exposeHeaders = concrete_token_id,concrete-error-occurred
+    allowMethod = POST,OPTIONS,GET,DELETE,PUT,PATCH
+    allowHeaders = CONCRETE_TOKEN_ID,CONTENT-TYPE,X-CLIENT-PROVIDER
+    allowCredentials = true
+```
+        
+
 ## 2017-11-18
 
 - 增加状态容器，容器中的状态基于id最多仅允许存在一份，防止出现多个线程操作相同id但实例不同的状态

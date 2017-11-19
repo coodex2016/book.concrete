@@ -19,7 +19,7 @@ Concrete 工具链默认提供了以下~~两个~~实现，如未指定invoker则
 
 ```
 
-【不推荐，原因嘛。。。】
+【已废弃】
 ```xml
     <dependency>
         <groupId>org.coodex</groupId>
@@ -51,6 +51,9 @@ concrete.properties配置
 
     // 使用 http://serverName
     serviceExample = Client.getInstance(ServiceExample.class, "http://serverName");
+    
+    // 使用 http://serverName 并且指定Global_Token为token的作用域，该值非空相同的，共享token
+    serviceExample = Client.getInstance(ServiceExample.class, "http://serverName", "Global_Token");
 ```
 
 一样的，JavaClient也支持数据模拟，即，无server并行开发，增加java参数`-Dorg.coodex.concrete.jaxrs.devMode=true`
@@ -129,7 +132,7 @@ concrete.client._server_.async=
 
 
 
-## okHttp3配置【不推荐】
+## okHttp3配置【已废弃】
 okHttp3.properties
     
     # 所有可被访问的域需要在此列出
