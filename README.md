@@ -21,9 +21,27 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-11-22
+
+- concrete-api: 
+    - 增加消息推送模型
+- concrete-core: 
+    - 增加消息推送模型的实现，提供基于Token的消息过滤器，提供LocalPostOffice，集群应用时，可自行基于JMS或者其他消息通信方式实现跨主机的PostOffice，只需在消息到达时调用AbstractPostOffice的分发功能即可；
+    - 【BUG FIXED】 
+        - bug: 因为PriorityBlockingQueue是无界的，最大值无效，所以，concrete默认是单线程再跑服务 - -#
+        - 修改业务线程池模型，只要线程池还有空闲线程就执行任务，线程池满时才放入优先级队列等待资源。因为concrete大量使用了本地线程变量，此模型较java本身的无界队列线程池模型保障了可用性的前提下更有利于资源回收
+- concrete-support-websocket: 
+    - 支持消息推送模型，deprecated原推送接口
+- concrete-support-jaxrs: 
+    - 支持消息推送模型，基于token过滤消息，服务端消息缓存5分钟。提供Polling接口，客户端可指定轮询超时时间，单位为秒，jsr339支持后端非阻塞获取消息，不占用业务线程池资源
+- concrete-api-tools: 
+    - 增加jQuery jaxrs对消息推送模型的支持，订阅消息通过configuration的onBroadcast(msgId, host, subject, content)达到，轮询需要至少调用一次concrete.polling()，建议在订阅好消息以后在开始轮询，否则可能出现token覆盖问题；jQuery websocket同时增加concrete.polling接口，无任何效果，为的是一份代码可以无缝支持多个传输协议
+    - 增加Angular jaxrs对消息模型推送的支持，订阅消息通过注入Broadcast服务实例来subscribe；同步修改Angular webSocket的订阅方式
+- 增加Java/RX client对消息推送的支持【todo】
+
 ## 2017-11-19
 
-- 多客户端共享token
+- 客户端共享token
     - jaxrs支持不再通过cookie传递TokenId，使用Header
     - websocket支持增加对tokenId的支持
     - java client和RX client获取实例时，可以定制token的作用域，tokenManagerKey非空且相同的，则在client端共享token
