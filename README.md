@@ -21,6 +21,33 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+
+## 2017-12-14
+
+- jaxrs: 规范tokenKey的header，使用`-`替换`_`
+- 修复devMode下，String类型containType不正确的问题
+- api-tools: angular api的Broadcast服务增加doPolling()接口，用于断线重连
+- 增加javaclient对消息推送的支持:
+    - 使用`org.coodex.concrete.client.MessageSubscriber.subscribe(String subject, MessageListener<T> listener)`进行订阅
+    - 原WebSocket的收发代码模式废弃
+
+## 2017-12-06
+
+- bugfix: coodex-utilities, Profile的getStrList接口默认值为null但是返回零长度数组的问题
+
+## 2017-11-27
+
+- concrete-commons-spring-data: SpecCommon增加表达式相关的接口，原SpecCommon.spec接口声明作废，
+
+## 2017-11-24
+
+- 调整模拟数据的参数，优先级为org.coodex.concrete.XXXX.devMode > org.coodex.concrete.devMode, XXXX可选范围如下：
+    - jaxrs: jsr311/339 support
+    - websocket: jsr356 support
+    - jaxrs.client: jaxrs java客户端
+    - websocket.client: websocket java 客户端
+- jaxrs-support: Polling模块自动加载，无需额外注册
+
 ## 2017-11-22
 
 - concrete-api: 
@@ -207,8 +234,8 @@ public interface FSMDemo2 extends FiniteStateMachine<DemoSignaledState> {
 
 - concrete-api-tools增加websocket jquery支持，使用方式同jaxrs的jquery支持。不同点：
     - configuration增加onBroadcast(msgId, hostId, subject, content)属性，用来处理服务端的广播
-- websocket java client增加BroadcastListener，用于处理服务端广播，支持ServiceLoader机制加载lisenter，也支持`org.coodex.concrete.websocket.WebSocket.addBroadcastListener`
-- 服务端支持确定广播调用模式，如下：
+- 【1214废弃】websocket java client增加BroadcastListener，用于处理服务端广播，支持ServiceLoader机制加载lisenter，也支持`org.coodex.concrete.websocket.WebSocket.addBroadcastListener`
+- 【1122废弃】服务端支持确定广播调用模式，如下：
 ```java
 WebSocket.getEndPoint("/WebSocket"/* websocket的ServerEndpoint */).broadcast(subject, message);
 ```
