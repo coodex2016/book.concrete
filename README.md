@@ -21,6 +21,12 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2017-12-26
+
+- jaxrs: 调整jaxrs的使用方式，实现上不在需要基于明确的jaxrs实现，也不再需要使用蹩脚的JaxRSServiceHelper.generate。
+    - 继承了javax.ws.rs.core.Application
+    - 只需要在相应的ConcreteJaxrsApplication中注册class或package即可
+
 
 ## 2017-12-14
 
