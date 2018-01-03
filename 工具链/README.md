@@ -925,6 +925,8 @@ public class AngularSDKGenerator {
 ```
 这时候可以看看src目录，下面创建了@concrete，这就是针对ExampleApi的SDK了，我们修改一下访问根（@concrete/AbstractConcreteService.ts）
 
+    > 2018-01-03，Angular生成的SDK模块化，进一步简化
+
 ```typescript
 // ....
     public root: string = 'http://localhost:8080/jaxrs';
@@ -940,12 +942,11 @@ ng g c example
 ```typescript
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms'; // <-- here
-
+import {FormsModule} from '@angular/forms'; 
 
 import {AppComponent} from './app.component';
-import {ExampleApi} from "@concrete/org/coodex/example"; // <-- here
-import { ExampleComponent } from './example/example.component';
+import {ExampleComponent} from './example/example.component';
+import {ConcreteJaxRSModule} from '@concrete/ConcreteJaxRSModule'; // <-- here
 
 
 @NgModule({
@@ -954,14 +955,16 @@ import { ExampleComponent } from './example/example.component';
         ExampleComponent
     ],
     imports: [
-        BrowserModule,
-        FormsModule  // <-- here
+        ConcreteJaxRSModule, // <-- and here
+        FormsModule,   
+        BrowserModule
     ],
-    providers: [ExampleApi], // <-- here
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
 }
+
 
 ```
 
@@ -972,15 +975,15 @@ export class AppModule {
     x1: <input type="number" [(ngModel)]="x1"/>
     x2: <input type="number" [(ngModel)]="x2"/>
     <button (click)="add()">add</button>
+    <button (click)="veh()">veh</button>
 </div>
-
 ```
 
 > example Component
 
 ```typescript
 import {Component, OnInit} from '@angular/core';
-import {ExampleApi} from "@concrete/org/coodex/example";
+import {ExampleApi} from '@concrete/ConcreteJaxRSModule';
 
 @Component({
     selector: 'app-example',
@@ -999,11 +1002,15 @@ export class ExampleComponent implements OnInit {
         this.x1 = 0;
         this.x2 = 0;
     }
-    
-    add(){
-        this.example.add(this.x1,this.x2).subscribe(
-            value => alert(this.x1 + " + " + this.x2 + " = " + value),
+
+    add() {
+        this.example.add(this.x1, this.x2).subscribe(
+            value => alert(this.x1 + ' + ' + this.x2 + ' = ' + value),
             (error) => alert(error));
+    }
+
+    veh(){
+        this.example.getRandomVeh('test').subscribe(value => alert(value));
     }
 }
 

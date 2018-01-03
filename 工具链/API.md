@@ -23,7 +23,7 @@ API.generate(渲染类型, 输出位置, 服务模块和ErrorCodes的包);
     文档化格式：gitbook, asciidoctor, markdown等
 
 
-当前版本提供了 7 个API工具
+当前版本提供了 ~~7~~ 8 个API工具
 
 | 渲染类型 | 作用 |
 | --- | --- |
@@ -31,6 +31,7 @@ API.generate(渲染类型, 输出位置, 服务模块和ErrorCodes的包);
 | JaxRS.code.jquery.js.v1 | 生成基于jquery的javascript api |
 | JaxRS.doc.jquery.gitbook.v1 | 生成jquery调用服务原子的API手册，Gitbook格式 |
 | JaxRS.code.angular.ts.v1 | 生成ts的接口定义代码包，基于Observable模式 |
+| JaxRS.code.angular.ts.v2 | 20180103，生成ts的接口定义代码包，基于Observable模式，推荐Angular版本高于4.3使用 |
 | java.code.RxJava2.v1 | 根据ConcreteService转为RXService |
 | WebSocket.code.jquery.js.v1 | 生成基于jquery的javascript api |
 | WebSocket.code.angular.ts.v1 | 生成ts的接口定义代码包，基于Observable模式 |
