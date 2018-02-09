@@ -10,7 +10,7 @@ Concrete工具链提供了一套Concrete规范的参考实现。
 
 ```xml
     <properties>
-        <concrete.version>0.2.1-SNAPSHOT</concrete.version>
+        <concrete.version>0.2.1</concrete.version>
     </properties>
 
 

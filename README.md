@@ -21,6 +21,11 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-02-09
+
+- 发布0.2.1到central repository
+- 0.2.x用于缺陷修复，开启0.3.0-SNAPSHOT
+
 ## 2018-02-08
 
 - coodex-utilities: 增加Debounce跟Throttle
