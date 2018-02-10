@@ -25,6 +25,11 @@ https://github.com/coodex2016/concrete.coodex.org
 
 - 发布0.2.1到central repository
 - 0.2.x用于缺陷修复，开启0.3.0-SNAPSHOT
+- 0.3.0 feature
+    - 支持JSR-370 jaxrs 2.1
+    - 将Polling模式改为SSE
+    - jaxrs rx client基于jaxrs响应式模式实现 
+    
 
 ## 2018-02-08
 
@@ -101,11 +106,11 @@ https://github.com/coodex2016/concrete.coodex.org
 - 服务端跨域设置如下
 ```properties
     # cors_settings.properties
-    allowOrigin = *
-    exposeHeaders = concrete_token_id,concrete-error-occurred
-    allowMethod = POST,OPTIONS,GET,DELETE,PUT,PATCH
-    allowHeaders = CONCRETE_TOKEN_ID,CONTENT-TYPE,X-CLIENT-PROVIDER
-    allowCredentials = true
+    allowOrigin=*
+    exposeHeaders=concrete_token_id,concrete-error-occurred
+    allowMethod=POST,OPTIONS,GET,DELETE,PUT,PATCH
+    allowHeaders=CONCRETE_TOKEN_ID,CONTENT-TYPE,X-CLIENT-PROVIDER
+    allowCredentials=true
 ```
         
 
