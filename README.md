@@ -21,6 +21,14 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-02-28
+
+- 0.2.2-SNAPSHOT
+- bugfix: 
+    - 根据https://stackoverflow.com/questions/27513994/chrome-stalls-when-making-multiple-requests-to-same-resource，修改浏览器端api的headers
+    - jaxrs2.0 Polling线程池有可能为空的问题
+- java-client移除了自动polling的机制
+
 ## 2018-02-09
 
 - 发布0.2.1到central repository
