@@ -21,6 +21,18 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-04-14
+
+- org.coodex.concrete.coomon.Assert声明作废，使用org.coodex.concrete.common.IF替代
+- 服务端增加dubbo支持
+- 客户端增加dubbo支持
+```properties
+location=dubbo
+# 客户端额外增加registry配置项
+registry=protocal://user:pwd@ip:port, .....
+```
+- 发布0.2.2
+
 ## 2018-04-04
 
 - coodex-utilities提供`Singleton<T>`和`SingletonMap<K,V>`，通过双重校验锁的模式，减少同步锁的开销，Concrete相关单例模式依次更改
