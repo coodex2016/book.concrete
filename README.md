@@ -20,6 +20,11 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-06-27
+- 发布订阅模型增加jms支持 `jms::_provider_`
+    - 增加activemq的支持模块 `jms::activemq:_url_`
+
+
 ## 2018-05-29
 - bad smell :(
 - 0.2.3-SNAPSHOT
