@@ -20,6 +20,13 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-07-02
+- concrete-core: 增加queue的默认值配置
+- 发布订阅模型支持Observer Bean,凡注册的Observer Bean均可被自动订阅
+    - 增加MessageConsumer注解，用于声明Observer Bean应该订阅的主题
+
+
+
 ## 2018-07-01
 
 - coodex-utilities: 增加多任务并行单元，所有并行任务完成后返回
