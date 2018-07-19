@@ -20,6 +20,18 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-07-19
+- concrete-jaxrs: 废弃蹩脚的BigString，增加Body注解，用来声明指定的`基础类型参数`通过body传递。Body也可以用于修饰自定义注解类型，如下例也能声明通过body传递
+```java
+@Target({ElementType.PARAMETER})
+@Retention(RetentionPolicy.RUNTIME)
+@Body
+public @interface PostParam {
+}
+```
+- concrete-support-jaxrs: 修复多个通过body传递参数时，参数传递有误的问题
+
+
 ## 2018-07-14
 - concrete-jaxrs-client: 修正URLEncoder问题，` ` 转为 `%20`
 - concrete-support-jaxrs: 修复Subjoin无法获取客户端传递的header的问题。根据[RFC2616 4.2](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2)，使其对大小写不敏感
