@@ -20,6 +20,10 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-07-28
+- coodex-utilities: 并行处理扩展了一个RunnerWrapper
+- concrete-core: APM 增加并行处理支持
+- conrete-apm-zipkin: 增加并行处理支持
 
 ## 2018-07-27
 - 增加APM能力，基于zipkin做了一个轻量封装
