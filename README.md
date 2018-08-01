@@ -20,6 +20,12 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-08-01
+- concrete-jaxrs-client: 修复接口返回集合类型时，返回null报错问题
+
+## 2018-07-30
+- concrete-core: `BeanValidationInterceptor` 无参数方法不再进行校验
+
 ## 2018-07-28
 - coodex-utilities: 并行处理扩展了一个RunnerWrapper
 - concrete-core: APM 增加并行处理支持
