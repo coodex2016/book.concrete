@@ -20,6 +20,14 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-08-17
+- coodex-utilities: https://github.com/snksoft/java-crc 在其基础上进行修改，参考 https://crccalc.com/ 的算法名定义了CRC8/16/32的枚举，提供通用的crc算法
+- concrete-commons-spring-data: 修复isNull和notNull接口参数问题
+- concrete-bom: 增加javax.el
+
+## 2018-08-04
+- concrete-api-tools: 修复生成的脚本在jquery3下无法正常使用的缺陷。
+
 ## 2018-08-01
 - concrete-jaxrs-client: 修复接口返回集合类型时，返回null报错问题
 
