@@ -20,9 +20,13 @@ https://github.com/coodex2016/concrete.coodex.org
 
 ------
 
+## 2018-08-19
+- concrete-core-spring: 简化切片的使用方式，废弃`org.coodex.concrete.spring.aspects.*Aspect`，直接定义`ConcreteInterceptor`的Bean即可
+- concrete-core: 修改TokenBasedTopicMessage的缓存机制，默认缓存30秒，可通过`tokenBasedTopicMessage.cacheLife`更改，单位为秒
+
 ## 2018-08-18
 - coodex-utitlies: 增加ByteArrayBuilder，方便构建协议数据
-- concrete-core: 增加TokenBaseTopic的订阅管理切片，和自动取消订阅的TokenEventListener，[使用参考](test-case/test-case-server/src/main/java/org/coodex/concrete/test/impl/SubscribeInterceptor.java)
+- concrete-core: 增加TokenBaseTopic的订阅管理切片，和自动取消订阅的TokenEventListener，[使用参考](https://github.com/coodex2016/concrete.coodex.org/test-case/test-case-server/src/main/java/org/coodex/concrete/test/impl/SubscribeInterceptor.java)
 
 ## 2018-08-17
 - coodex-utilities: https://github.com/snksoft/java-crc 在其基础上进行修改，参考 https://crccalc.com/ 的算法名定义了CRC8/16/32的枚举，提供通用的crc算法
