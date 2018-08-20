@@ -24,6 +24,6 @@
 
 
     //服务原子的实现中如下使用
-    Assert.is(是否撞了, SomeErrorCodes.撞车, 司机, 车, 被撞的车);
+    IF.is(是否撞了, SomeErrorCodes.撞车, 司机, 车, 被撞的车);
 
 ```
