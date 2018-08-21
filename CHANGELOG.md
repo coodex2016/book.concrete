@@ -1,4 +1,7 @@
 
+## 2018-08-21
+- concrete-support-jsr311, concrete-support-jsr339: 重命名了ConcreteJaxrs\*\*\*Application，调整为ConcreteJSR\*\*\*Application，作废原有名称
+
 ## 2018-08-20
 - concrete-api: 增加 `MessageSubject` 注解，用于修饰POJO，可达到实现`Subject`接口相同效果，减少对POJO的代码侵入，`concrete-core`修改代码进行支持
 - concrete-core: 修改切片对accept方式，定义了`ServerSide` `Local` `ClientSide` `Default` 四个注解，用来声明Interceptor的作用域

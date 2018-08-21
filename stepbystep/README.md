@@ -2,6 +2,8 @@
 
 在开始之前，需要掌握一些maven的基础知识。
 
+本过程所有的代码放在了github上，地址 https://github.com/coodex2016/cocnrete-demo 不同的过程使用tag进行了标记
+
 ## 创建一个maven工程
 
 我们以工程名 `concrete-demo` 为例。
@@ -54,4 +56,4 @@
 ```
 注意一下，所有源代码必须使用`UTF-8`，不要问我为什么
 
-[01 定义api](step1.md)
+[1.1 定义api](step1_1.md)
