@@ -20,6 +20,8 @@
 
 ## 在concrete-demo的pom.xml中增加依赖管理
 
+> 使用快照版时，请先在pom或者maven的config增加sonatype的快照库，或者在私服中增加到sonatype快照库的代理
+
 ```xml
     <properties>
         <concrete.version>0.2.3-SNAPSHOT</concrete.version>
