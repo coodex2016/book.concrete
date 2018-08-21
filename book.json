@@ -2,6 +2,9 @@
   "gitbook": "3.*.*",
   "title": "Concrete手册",
   "author": "Shen Hainan<jujus.shen@126.com>",
+  "variables": {
+    "concreteVersion": "0.2.3-SNAPSHOT"
+  },
   "links": {
     "sidebar": {
       "coodex.org": "http://coodex.org"
