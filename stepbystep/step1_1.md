@@ -15,36 +15,7 @@ api的pom中，增加concrete-api依赖
 
 > 关于包名，建议使用`**.模块.api` `××.模块.rpc` 用来存放Service定义，后续步骤中也会有相关说明
 
-```java
-package org.coodex.concrete.demo.api;
-
-import org.coodex.concrete.api.ConcreteService;
-import org.coodex.concrete.api.MicroService;
-import org.coodex.util.Parameter;
-
-@MicroService()
-public interface DemoService extends ConcreteService {
-
-    /**
-     * x1 + x2 = ?
-     *
-     * @param x1
-     * @param x2
-     * @return x1 + x2
-     */
-    int add(@Parameter("x1") int x1,
-            @Parameter("x2") int x2);
-
-    /**
-     * say hello to %name%
-     *
-     * @param name
-     * @return hello %name%
-     */
-    String sayHello(@Parameter("name") String name);
-
-}
-```
+{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/demo/api/src/main/java/org/coodex/concrete/demo/api/DemoService.java" %}{% endgithub_embed %}
 
 以上，就是一个concrete service最基本的定义，几个要点：
 - 必须是 `interface`

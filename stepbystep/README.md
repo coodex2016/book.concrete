@@ -2,7 +2,7 @@
 
 在开始之前，需要掌握一些maven的基础知识。
 
-本过程所有的代码放在了github上，地址 https://github.com/coodex2016/cocnrete-demo 不同的过程使用tag进行了标记
+本过程所有的代码放在了github上，地址 https://github.com/coodex2016/concrete-demo 不同的过程使用tag进行了标记
 
 ## 创建一个maven工程
 
@@ -22,40 +22,13 @@
 
 > 使用快照版时，请先在pom或者maven的config增加sonatype的快照库，或者在私服中增加到sonatype快照库的代理
 
-```xml
-    <properties>
-        <concrete.version>0.2.3-SNAPSHOT</concrete.version>
-    </properties>
+{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/pom.xml#L17-L31" %}{% endgithub_embed %}
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.coodex</groupId>
-                <artifactId>concrete-bom</artifactId>
-                <version>${concrete.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-```
 
 考虑到api包的兼容性，建议增加以下build参数
-```xml
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-```
+
+{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/pom.xml#L34-L46" %}{% endgithub_embed %}
+
 注意一下，所有源代码必须使用`UTF-8`，不要问我为什么
 
 [1.1 定义api](step1_1.md)
