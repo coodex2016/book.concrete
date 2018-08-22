@@ -23,6 +23,7 @@
     * [操作日志](definition/log.md)
 
 * [默认实现](impl/README.md)
+    * [配置规范](impl/config.md)
     * [BeanProvider](impl/beanProvider.md)
     * [TokenManager](impl/TokenManager.md)
     * [服务原子切片](impl/Aspects.md)
@@ -40,7 +41,7 @@
     * [SaaS](impl/SaaS.md)
     * [Counter](impl/counter.md)
     * [mocker](impl/mocker.md)
-    * [参数](impl/config.md)
+    
 
 * [帐号管理](accounts/README.md)
 

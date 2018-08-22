@@ -28,7 +28,6 @@ concrete在资源文件的使用上，有一套规范：`TAG.MODULE.key`，配�
     - dubbo: concrete-dubbo-client支持
   - tokenManagerKey: 多个服务调用者之间共享token默认是根据`module`来共享，我们也可以指定该属性，使相同的tokenManagerKey的服务调用者共享同一个token,当然，前提是，发布的服务是相同的token管理
   - tokenTransfer: 模块到模块间调用时，是否将调用者的token传递到被调用者端，例如 前端 --> B --> C，模块C也需要校验token，那么，B调用C时，应该指定tokenTransfer为true
-  - async: 是否异步
   - 其他扩展
     - dubbo扩展
       - registry: 多个用`，`分隔的dubbo注册中心地址
