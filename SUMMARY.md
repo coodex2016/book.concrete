@@ -10,6 +10,19 @@
     * [2.2 java端调用服务](stepbystep/step2_2.md)
     * [2.3 依赖注入环境中使用Client](stepbystep/step2_3.md)
     * [2.4 生成B端代码](stepbystep/step2_4.md)
+    * [3.0 服务命名](stepbystep/step3_0.md)
+    * [3.1 RBAC](stepbystep/step3_1.md)
+    * [3.2 单元调试](stepbystep/step3_2.md)
+    * [3.3 签名验签](stepbystep/step3_3.md)
+    * [3.4 异常信息](stepbystep/step3_4.md)
+    * [3.5 APM, 应用性能监控](stepbystep/step3_5.md)
+    * [3.6 数据模拟](stepbystep/step3_6.md)
+    * [3.7 多发布方式支持](stepbystep/step3_7.md)
+    * [3.8 异步调用](stepbystep/step3_8.md)
+    * 4.1 有限状态机
+    * 4.2 发布订阅（含基于Token的推送）
+    * 4.3 Copier
+    * 4.4 Spring data jpa小工具
 
 * [定义](definition/README.md)
     * [@MicroService](definition/MicroService.md)

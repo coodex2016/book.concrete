@@ -6,6 +6,13 @@ concrete在资源文件的使用上，有一套规范：`TAG.MODULE.key`，配�
 - `TAG`.properties 中的 `MODULE`.`key`
 - concrete.properties 中的 `TAG.MODULE.key`
 
+## 使用
+
+```java
+String value = ConcreteHelper.getString(tag, module, key);
+```
+
+
 ## concrete的一些配置
 
 ### concrete-api-tools
