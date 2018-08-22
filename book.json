@@ -16,8 +16,7 @@
     "tbfed-pagefooter",
     "github",
     "toggle-chapters",
-    "anchors",
-    "github-embed"
+    "anchors"
   ],
   "language": "zh-hans",
   "pluginsConfig": {
@@ -34,10 +33,6 @@
     },
     "github":{
       "url":"https://github.com/coodex2016/concrete.coodex.org"
-    },
-    "github-embed": {
-      "showLink": true,
-      "reindent": false
     }
   }
 }
