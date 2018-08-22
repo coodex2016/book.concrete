@@ -4,7 +4,32 @@
 
 在模块的pom中增加如下依赖
 
-{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/demo/release/pom.xml#L15-L38" %}{% endgithub_embed %}
+```xml
+ <dependencies>
+
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>demo-impl</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-core-spring</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-support-jsr339</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jersey</artifactId>
+        </dependency>
+
+    </dependencies>
+```
 
 > concrete-core-spring: concrete基于spring的插件  
 > concrete-support-jsr339: jaxrs2.0规范的服务端支持组件  
@@ -12,7 +37,72 @@
 
 新建一个class `org.coodex.concrete.demo.boot.DemoBoot`
 
-{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/demo/release/src/main/java/org/coodex/concrete/demo/boot/DemoBoot.java" %}{% endgithub_embed %}
+```java
+package org.coodex.concrete.demo.boot;
+
+import org.coodex.concrete.demo.api.DemoService;
+import org.coodex.concrete.spring.ConcreteSpringConfiguration;
+import org.coodex.concrete.support.jsr339.ConcreteJSR339Application;
+import org.glassfish.jersey.jackson.JacksonFeature;
+import org.glassfish.jersey.servlet.ServletContainer;
+import org.glassfish.jersey.servlet.ServletProperties;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
+@SpringBootApplication(scanBasePackages = "org.coodex.concrete.demo.impl")
+@Configuration
+@Import(ConcreteSpringConfiguration.class)
+public class DemoBoot {
+
+    /**
+     * 运行 spring boot
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(DemoBoot.class, args);
+    }
+
+    /**
+     * 定义一个jaxrsServlet
+     *
+     * @return
+     */
+    @Bean
+    public ServletRegistrationBean jaxrsServlet() {
+        ServletContainer container = new ServletContainer();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(
+                container, "/jaxrs/*");
+
+        // 按照jaxrs规范，指定Application的className
+        registrationBean.addInitParameter(ServletProperties.JAXRS_APPLICATION_CLASS,
+                JaxRSApplication.class.getName());
+
+        registrationBean.setName("demo");
+
+        // 异步支持（重要：servlet 3.0/jaxrs 2.0 都支持异步，性能和可管理性都有大幅提升）
+        registrationBean.setAsyncSupported(true);
+        return registrationBean;
+    }
+
+    /**
+     * jsr339(jaxrs 2.0)规范的Application
+     */
+    public static class JaxRSApplication extends ConcreteJSR339Application {
+        public JaxRSApplication() {
+            register(
+                    // 使用 jackson 作为 jaxrs的序列化和反序列化实现
+                    JacksonFeature.class,
+                    // 注册 我们写的api
+                    DemoService.class);
+        }
+    }
+}
+```
 
 > scanBasePackages 指定 `org.coodex.concrete.demo.impl`，这也是为什么我们要这么命名的原因，`“约定优于配置”`，我们的项目应该有一个统一的命名约定  
 > `@Import(ConcreteSpringConfiguration.class)`, `ConcreteSpringConfiguration`中预制了很多concrete所需的bean和约定
@@ -49,5 +139,5 @@ jaxrs只是concrete支持的方式之一，目前还有`dubbo` `websocket`的支
 concrete给出的答案是：  
 - 系统与系统之间，非java环境或非java6以上环境，提供[服务文档](step2_1.md)
 - 系统与系统之间，java6以上环境，使用[`concrete-client`](step2_2.md)
-- 模块与模块之间，使用`concrete-client`的[模块化](step2_3.md)
+- 模块与模块之间，使用`concrete-client`，同上，也可以通过[Client依赖注入规范](step2_3.md)使用
 - Browser前端到系统之间，使用`concrete-api-tools`[生成代码](step2_4.md)

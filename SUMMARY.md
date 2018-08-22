@@ -6,6 +6,9 @@
     * [1.1 开始定义api](stepbystep/step1_1.md)
     * [1.2 实现api](stepbystep/step1_2.md)
     * [1.3 使用spring boot 跑起来](stepbystep/step1_3.md)
+    * [2.1 生成文档](stepbystep/step2_1.md)
+    * [2.2 java端调用服务](stepbystep/step2_2.md)
+    * [2.3 依赖注入环境中使用Client](stepbystep/step2_3.md)
 
 * [定义](definition/README.md)
     * [@MicroService](definition/MicroService.md)

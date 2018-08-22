@@ -4,7 +4,28 @@
 
 在pom中，引入以下依赖
 
-{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/demo/impl/pom.xml#L15-L34" %}{% endgithub_embed %}
+```xml
+   <dependencies>
+
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>demo-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-core</artifactId>
+        </dependency>
+
+    </dependencies>
+```
 
 > 同工程的模块间，推荐使用项目变量的方式指定`groupId`和`version`
 
@@ -18,6 +39,25 @@
 
 > 关于包名，建议所有的实现且与实现相关的内容都放在 `**.模块.impl` 下，比如 `**.模块.impl.copier` `**.模块.impl.listener` `**.模块.impl.interceptor`等
 
-{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/demo/impl/src/main/java/org/coodex/concrete/demo/impl/DemoServiceImpl.java" %}{% endgithub_embed %}
+```java
+package org.coodex.concrete.demo.impl;
+
+import org.coodex.concrete.demo.api.DemoService;
+
+import javax.inject.Named;
+
+@Named // 使用javax.inject规范，把该class定义成一个可被注入的对象
+public class DemoServiceImpl implements DemoService {
+    @Override
+    public int add(int x1, int x2) {
+        return x1 + x2;
+    }
+
+    @Override
+    public String sayHello(String name) {
+        return String.format("Hello %s!", name);
+    }
+}
+```
 
 [1.3 使用Spring boot 跑起来](step1_3.md)

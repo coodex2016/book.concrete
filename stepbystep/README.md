@@ -22,12 +22,42 @@
 
 > 使用快照版时，请先在pom或者maven的config增加sonatype的快照库，或者在私服中增加到sonatype快照库的代理
 
-{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/pom.xml#L17-L31" %}{% endgithub_embed %}
+```xml
+    <properties>
+        <concrete.version>0.2.3-SNAPSHOT</concrete.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.coodex</groupId>
+                <artifactId>concrete-bom</artifactId>
+                <version>${concrete.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+```
 
 
 考虑到api包的兼容性，建议增加以下build参数
 
-{% github_embed "https://github.com/coodex2016/concrete-demo/blob/step1/pom.xml#L34-L46" %}{% endgithub_embed %}
+```xml
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+```
 
 注意一下，所有源代码必须使用`UTF-8`，不要问我为什么
 
