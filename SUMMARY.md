@@ -9,6 +9,7 @@
     * [2.1 生成文档](stepbystep/step2_1.md)
     * [2.2 java端调用服务](stepbystep/step2_2.md)
     * [2.3 依赖注入环境中使用Client](stepbystep/step2_3.md)
+    * [2.4 生成B端代码](stepbystep/step2_4.md)
 
 * [定义](definition/README.md)
     * [@MicroService](definition/MicroService.md)
