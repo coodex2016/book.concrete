@@ -44,6 +44,7 @@
 - 依赖concrete-accounts-simple-impl是为了提供账户系统
 
 我们预期的结果是
+
 | 账户 | 角色 | add | sayHello | randomPlate |
 | ---- | ---- | --- | --- | --- |
 | Lele | A, B | true | 信任: true; 不信任: false | true |
