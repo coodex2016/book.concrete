@@ -170,7 +170,7 @@ public class DemoServiceTest extends ConcreteTestCase {
     <bean class="org.coodex.concrete.demo.impl.DemoServiceImpl"/>
 </beans>
 ```
-里面只用定义了我们要用到的东西
+里面只用定义了我们要用到的东西。因为ConcreteSpringConfiguration里已经指定了开启切片，所以`<aop:aspectj-autoproxy></aop:aspectj-autoproxy>`也可以不要
 
 再把3.1的accounts复制到test作用域的resources下
 
