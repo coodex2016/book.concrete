@@ -171,7 +171,7 @@ public class Girl {
     对应`List<Girl> get();`，本来有个get接口名，在没有使用`@MicroService`注解的接口上，jaxrs模块会自动抹去谓词
     
 - /Girls POST，新建一个资源
-    对应`@MicroService void saveGirl(@Parameter("girl") Girl girl);`，一样的，使用`@MicroService()`声明抹去接口名，
+    对应`@MicroService void saveGirl(@Parameter("girl") Girl girl);`，使用`@MicroService`声明后，把接口名抹去了，
     根据[谓词规则](../impl/jsr311.md#谓词定义)使用POST方法
     
 - /Girls/{name} GET，获取一个指定的资源
@@ -185,7 +185,7 @@ public class Girl {
 - /Girls/{name} DELETE，删除一个资源
     对应`@MicroService void deleteByName(@Parameter("name") String name);`，
     根据[谓词规则](../impl/jsr311.md#谓词定义)使用DELETE方法，
-    使用`@MicroService`声明后，把接口名抹去了
+    一样的，使用`@MicroService()`声明抹去接口名
     
 - /Girls/{name}/stars GET，获取一个资源的一项属性
     对应`@MicroService("{name}/stars") Integer getStars(@Parameter("name") String name);`，使用`@MicroService`重载了接口名
@@ -248,7 +248,7 @@ public class GirlServiceImpl implements GirlService {
 }
 ```
 
-里面用到了一个copier，后续在详细介绍，代码列上
+里面用到了一个copier，后续再详细介绍，代码列上
 ```java
 package org.coodex.concrete.demo.impl.copier;
 
@@ -280,6 +280,7 @@ DemoBoot里，注册上这个服务接口。
 > #### Hint::
 >
 > 因为以后我们会有更多的服务需要被注册进来，所以，选择按package注册的方法，以后再增加服务时DemoBoot就不需要动了
+
 ```java
 public static class JaxRSApplication extends ConcreteJSR339Application {
         public JaxRSApplication() {
