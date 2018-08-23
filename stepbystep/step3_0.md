@@ -168,6 +168,7 @@ public class Girl {
 
 怎么做到的？我们一个个看
 - /Girls GET，即获得全部资源
+    
     对应`List<Girl> get();`，本来有个get接口名，在没有使用`@MicroService`注解的接口上，jaxrs模块会自动抹去谓词
     
 - /Girls POST，新建一个资源
@@ -175,19 +176,23 @@ public class Girl {
     根据[谓词规则](../impl/jsr311.md#谓词定义)使用POST方法
     
 - /Girls/{name} GET，获取一个指定的资源
+    
     对应`Girl get(@Parameter("name") String name);`，根据[谓词规则](../impl/jsr311.md#谓词定义)使用GET方法，
     在没有使用`@MicroService`注解的接口上，jaxrs模块会自动抹去谓词
     
 - /Girls/{name} PUT，修改一个指定的资源
+    
     对应`@MicroService("{name}") void updateGirlInfo(@Parameter("name") String name, @Parameter("girl") Girl girl);`，
     根据[谓词规则](../impl/jsr311.md#谓词定义)使用PUT方法
     
 - /Girls/{name} DELETE，删除一个资源
+    
     对应`@MicroService void deleteByName(@Parameter("name") String name);`，
     根据[谓词规则](../impl/jsr311.md#谓词定义)使用DELETE方法，
     一样的，使用`@MicroService()`声明抹去接口名
     
 - /Girls/{name}/stars GET，获取一个资源的一项属性
+    
     对应`@MicroService("{name}/stars") Integer getStars(@Parameter("name") String name);`，使用`@MicroService`重载了接口名
 
 先做一个实现
@@ -369,7 +374,7 @@ Exception in thread "main" org.coodex.concrete.client.jaxrs.JaxRSClientException
 
 ## 参数组合
 
-在上例中，我们看到了POST pojo，那么原始类型及String如何post呢？
+在上例中，我们看到了POST pojo，那么原始类型及String如何POST呢？
 
 我们回到api模块来做一个示例，先加上concrete-jaxrs的依赖
 ```xml
@@ -409,6 +414,8 @@ DemoService，修改`add`和`sayHello`
 http://localhost:8080/jquery/index.html
 
 打开浏览器的调试工具，切换到网络栏。点这两个按钮，看看跟之前请求有什么变化？
+
+补充：如果多个非基础类型或包装类型，会自动参数组合
 
 截止到当前的代码： https://github.com/coodex2016/concrete-demo/tree/step3_0_1
 

@@ -40,6 +40,7 @@
     * [配置规范](impl/config.md)
     * [BeanProvider](impl/beanProvider.md)
     * [TokenManager](impl/TokenManager.md)
+    * [拦截器](impl/interceptor.md)
     * [服务原子切片](impl/Aspects.md)
     * [单元调试](impl/concrete-test.md)
     * [服务端支持](impl/server-side.md)
