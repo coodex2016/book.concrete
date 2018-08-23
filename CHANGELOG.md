@@ -1,4 +1,7 @@
 
+## 2018-08-23
+-concrete-core: bug fix. 修复JavassistHelper.getSignature时，基础类型支持有误的问题
+
 ## 2018-08-21
 - concrete-support-jsr311, concrete-support-jsr339: 重命名了ConcreteJaxrs\*\*\*Application，调整为ConcreteJSR\*\*\*Application，作废原有名称
 

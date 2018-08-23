@@ -33,6 +33,8 @@ path=$$$YOUR PATH, Change it$$$
         </dependency>
 ```
 
+> #### Hint::
+>
 > 这个依赖让`SpringBootServletInitializer`具备发布静态页面的功能（我只用到的这个，说的不对的，别打），默认使用resources下的`static`目录为静态页面的根
 
 让`DemoBoot`继承自`SpringBootServletInitializer`

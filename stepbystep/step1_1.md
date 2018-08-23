@@ -15,6 +15,8 @@ api的pom中，增加concrete-api依赖
 
 创建一个 interface `org.coodex.concrete.demo.api.DemoService`
 
+> #### Hint::关于包名
+>
 > 关于包名，建议使用`**.模块.api` `××.模块.rpc` 用来存放Service定义，后续步骤中也会有相关说明
 
 ```java

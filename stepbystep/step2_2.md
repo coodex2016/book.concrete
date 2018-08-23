@@ -72,6 +72,8 @@ client.demo.properties
 location=http://localhost:8080/jaxrs
 ```
 
+> #### Hint::
+>
 > `concrete-jaxrs-client`对location是http(s)协议的进行支持
 
 log4j.properties

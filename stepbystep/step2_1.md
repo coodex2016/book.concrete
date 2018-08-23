@@ -83,7 +83,8 @@ public class VehiclePlate {
     }
 }
 ```
-
+> #### Hint::
+>
 > `@VehicleNum` 和 `@INTEGER` 是mock的注解，先放着，一会用  
 > `@Description` 用来修饰bean property,推荐在get和is方法上进行修饰，继承类可以重载
 
@@ -98,9 +99,11 @@ public class VehiclePlate {
 
 ok, 现在工程build正常，开始生成文档
 
+> #### Hint::
+>
 > 注意，不是必须现有实现才能生成文档，我们的理念是，前后端、系统间、模块间只依赖api，因此只要有api即可生成文档。  
 
-考虑到模块剑客能组合提供服务，我们单独建一个maven子模块`api-helper`来负责产生这些文档和脚本,`api-helper`放在工程根目录下，以示通用
+考虑到模块间可能组合提供服务，我们单独建一个maven子模块`api-helper`来负责产生这些文档和脚本,`api-helper`放在工程根目录下，以示通用
 
 在pom里增加如下依赖
 ```xml
@@ -122,6 +125,8 @@ ok, 现在工程build正常，开始生成文档
 ```
 
 
+> #### Hint::
+>
 > [concrete-api-tools](../impl/API.md)是concrete生成文档、脚本、代码的工具包  
 > 其他api模块可以后续逐一加入
 
@@ -145,6 +150,8 @@ public class XGen {
 }
 ```
 
+> #### Hint::
+>
 > 说明一下，`org.coodex.concrete.apitools.API` 提供了两个静态接口，`generate`和`generateFor`，差别是：
 > - generate: 硬编码指定渲染描述符和生成的路径
 > - generateFor: 通过concrete的[配置规范](../impl/config.md#concrete-api-tools)配置渲染描述符和生成的路径
@@ -174,4 +181,6 @@ gitbook serve
 
 然后打开 http://localhost:4000 
 
+> #### Hint::
+>
 > 对了，记得先装好 `gitbook-cli`， `npm install gitbook-cli -g`

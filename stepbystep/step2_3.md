@@ -16,6 +16,8 @@ concrete-client也可以在依赖注入环境中使用。下面我们来走一�
         </dependency>
 ```
 
+> #### Hint::依赖包说明
+>
 > - concrete-core-spring: concrete基于spring的插件
 > - javax.inject: jsr 330规范
 
@@ -68,6 +70,8 @@ resources下增加一个`example.xml`
 </beans>
 ```
 
+> #### Hint::说明
+>
 > - `context:annotation-config`使jsr 330生效
 > - `ConcreteSpringConfiguration`提供了concrete在spring实现中的一些关键Bean以及一些规范
 > - `ClientInjectExample`,注册一下我们的例子

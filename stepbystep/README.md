@@ -12,7 +12,8 @@
 
 模块目录为`demo/api`
 
-> why ?  
+> #### Hint::why ?
+>
 > 0.2.3开始，concrete注重系统逻辑上的模块化，
 > concrete的一个模块颗粒度与maven的颗粒度不同，
 > 一般来讲，一个逻辑上的concrete模块至少会包含`api` `impl`两个maven模块，
@@ -20,6 +21,8 @@
 
 ## 在concrete-demo的pom.xml中增加依赖管理
 
+> #### Hint::关于快照版本
+>
 > 使用快照版时，请先在pom或者maven的config增加sonatype的快照库，或者在私服中增加到sonatype快照库的代理
 
 ```xml

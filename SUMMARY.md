@@ -10,7 +10,7 @@
     * [2.2 java端调用服务](stepbystep/step2_2.md)
     * [2.3 依赖注入环境中使用Client](stepbystep/step2_3.md)
     * [2.4 生成B端代码](stepbystep/step2_4.md)
-    * [3.0 服务命名](stepbystep/step3_0.md)
+    * [3.0 服务命名及参数组合](stepbystep/step3_0.md)
     * [3.1 RBAC](stepbystep/step3_1.md)
     * [3.2 单元调试](stepbystep/step3_2.md)
     * [3.3 签名验签](stepbystep/step3_3.md)

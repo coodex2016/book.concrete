@@ -30,10 +30,11 @@
 
     </dependencies>
 ```
-
-> concrete-core-spring: concrete基于spring的插件  
-> concrete-support-jsr339: jaxrs2.0规范的服务端支持组件  
-> spring-boot-starter-jersey: spring boot的jersey插件，jersey是oracle官方的一个jaxrs参考实现
+> #### Info::依赖包说明
+>
+> - concrete-core-spring: concrete基于spring的插件
+> - concrete-support-jsr339: jaxrs2.0规范的服务端支持组件
+> - spring-boot-starter-jersey: spring boot的jersey插件，jersey是oracle官方的一个jaxrs参考实现
 
 新建一个class `org.coodex.concrete.demo.boot.DemoBoot`
 
@@ -103,7 +104,8 @@ public class DemoBoot {
     }
 }
 ```
-
+> #### Info::关键点说明
+>
 > scanBasePackages 指定 `org.coodex.concrete.demo.impl`，这也是为什么我们要这么命名的原因，`“约定优于配置”`，我们的项目应该有一个统一的命名约定  
 > `@Import(ConcreteSpringConfiguration.class)`, `ConcreteSpringConfiguration`中预制了很多concrete所需的bean和约定
 
@@ -116,12 +118,14 @@ http://localhost:8080/jaxrs/OrgCoodexConcreteDemoApiDemoService/add/1/2
 
 http://localhost:8080/jaxrs/OrgCoodexConcreteDemoApiDemoService/sayHello/davidoff
 
+> #### Info::URL解析
+>
 > 针对上述链接，我们做一下解析：  
-> http://localhost:8080  spring boot 默认的主机和端口  
-> /jaxrs <-- 我们注册的jaxrsServlet的mapping  
-> /OrgCoodexConcreteDemoApiDemoService <- concrete jaxrs 默认的服务类命名方式，去掉`.`，转换为大驼峰。好麻烦是吗？没关系，一会我们看看怎么让它更方便  
-> /add <-- 方法名  
-> /1/2 <-- 参数x1和x2  
+> - http://localhost:8080  spring boot 默认的主机和端口
+> - /jaxrs <-- 我们注册的jaxrsServlet的mapping
+> - /OrgCoodexConcreteDemoApiDemoService <- concrete jaxrs 默认的服务类命名方式，去掉`.`，转换为大驼峰。好麻烦是吗？没关系，一会我们看看怎么让它更方便
+> - /add <-- 方法名
+> - /1/2 <-- 参数x1和x2
 >   
 > 实际上，我们并不需要关注这些，[concrete-api-tools](../impl/API.md)能够帮我们生成与访问有关的信息，
 > 开发者无需关注类、方法、参数相关的形式，直接按照规范调用就好了。当我们需要对外部非concrete调用时，

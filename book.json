@@ -13,10 +13,11 @@
   "plugins": [
     "donate",
     "mermaid-gb3",
-    "tbfed-pagefooter",
+    "page-footer-ex",
     "github",
     "toggle-chapters",
-    "anchors"
+    "anchors",
+    "callouts"
   ],
   "language": "zh-hans",
   "pluginsConfig": {
@@ -26,13 +27,17 @@
       "button": "好哒",
       "title": "<strong><font size='7'>壕</font>，请用<font size='5'>金钱</font>尽情<font size='6'>羞辱</font>我<font size='7'>！</font></strong>"
     },
-    "tbfed-pagefooter": {
-      "copyright": "&copy coodex.org 2016",
-      "modify_label": "修订时间：",
-      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    "page-footer-ex": {
+      "copyright": "&copy; [coodex.org](https://coodex.org) 2016 All rights reserved",
+      "markdown": true,
+      "update_label": "修订时间：",
+      "update_format": "YYYY-MM-DD HH:mm:ss"
     },
-    "github":{
-      "url":"https://github.com/coodex2016/concrete.coodex.org"
+    "github": {
+      "url": "https://github.com/coodex2016/concrete.coodex.org"
+    },
+    "callouts": {
+      "showTypeInHeader": false
     }
   }
 }
