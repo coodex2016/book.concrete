@@ -156,7 +156,23 @@ public class DemoServiceTest extends ConcreteTestCase {
 }
 ```
 
-3.1的accounts复制到test作用域的resources下
+我们这次使用xml来定义bean，在test作用域的resources下，建一个demoService.xml，与调试单元中的`@ContextConfiguration("classpath:demoService.xml")`对应起来
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <bean class="org.coodex.concrete.spring.ConcreteSpringConfiguration"/>
+    <bean class="org.coodex.concrete.core.intercept.RBACInterceptor"/>
+    <bean class="org.coodex.concrete.accounts.simple.impl.SimpleAccountFactory"/>
+    <bean class="org.coodex.concrete.demo.impl.DemoServiceImpl"/>
+</beans>
+```
+里面只用定义了我们要用到的东西
+
+再把3.1的accounts复制到test作用域的resources下
 
 ok，全部通过。大家可以试着改改看看结果。
 
