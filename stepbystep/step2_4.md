@@ -90,3 +90,16 @@ public class DemoBoot extends SpringBootServletInitializer{
 截止到目前为止，我们掌握了基本的定义服务、文档化服务、发布服务、调用服务能力，后续小节我们开始介绍一些concrete的进阶能力。
 
 截止到当前的代码： https://github.com/coodex2016/concrete-demo/tree/step2_4
+
+> #### Hint::
+>
+> cocnrete生成前端代码不止支持jQuery的jaxrs调用
+>
+> | 渲染描述符 | 作用 |
+> | -------- | ---- |
+> | JaxRS.code.angular.ts.v1 | 生成ts的接口定义代码包，基于Observable模式，Angular 2<=v<4.3使用 |
+> | JaxRS.code.angular.ts.v2 | 生成ts的接口定义代码包，基于Observable模式，推荐Angular版本高于4.3使用 |
+> | WebSocket.code.jquery.js.v1 | Websockt服务端，生成基于jquery的javascript api |
+> | WebSocket.code.angular.ts.v1 | Websockt服务端，生成ts的接口定义代码包，基于Observable模式 |
+>
+> 这些生成的代码，面向程序开发者是接口一致的。当服务端切换发布方式时，业务代码不需要做任何调整。
