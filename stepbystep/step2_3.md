@@ -72,7 +72,7 @@ resources下增加一个`example.xml`
 
 > #### Hint::说明
 >
-> - `context:annotation-config`使jsr 330生效
+> - `context:annotation-config` 支持Annotation-based的依赖注入
 > - `ConcreteSpringConfiguration`提供了concrete在spring实现中的一些关键Bean以及一些规范
 > - `ClientInjectExample`,注册一下我们的例子
 
