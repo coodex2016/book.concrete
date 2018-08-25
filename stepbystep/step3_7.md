@@ -132,7 +132,7 @@ GirlServiceImpl实现
                 onBroadcast: function (msgId, host, subject, data) {
 
                     // 3.7.1
-                    var el = '<div>'subject + ': ' +data.arrived + ' ' + data.girl.name +'</div>';
+                    var el = '<div>' + subject + ': ' +data.arrived + ' ' + data.girl.name +'</div>';
                     $('#content').append($(el));
                 }
             });
