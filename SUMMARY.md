@@ -18,9 +18,10 @@
     * [3.5 数据模拟](stepbystep/step3_5.md)
     * [3.6 发布订阅](stepbystep/step3_6.md)
     * [3.7 基于Token的推送](stepbystep/step3_7.md)
-    * [3.8 多发布方式支持](stepbystep/step3_8.md)
-    * [3.9 异步调用](stepbystep/step3_9.md)
-    * 3.10 APM, 应用性能监控
+    * [3.8 APM, 应用性能监控](stepbystep/step3_8.md)
+    * [3.9 多发布方式支持](stepbystep/step3_9.md)
+    * [3.10 异步调用](stepbystep/step3_10.md)
+    * 3.11 RBAC进阶
     * 4.1 Copier
     * 4.2 coodex-utilites
     * 4.3 有限状态机

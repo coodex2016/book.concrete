@@ -1,4 +1,11 @@
 
+## 2018-08-25
+- concrete-core:
+    - 废弃`AbstractTokenBaseTopicSubscribeInterceptor`
+    - 新增`AbstractTokenBasedTopicSubscribeInterceptor`进行替代，关注点更少
+- concrete-core-spring:
+    - 相应修改
+
 ## 2018-08-24
 - concrete-core: 
     - 一些优化；
@@ -82,7 +89,7 @@ public @interface PostParam {
 
 
 ### 2018-07-14
-- concrete-jaxrs-client: 修正URLEncoder问题，` ` 转为 `%20`
+- concrete-jaxrs-client: 修正URLEncoder问题，空格转为 `%20`
 - concrete-support-jaxrs: 修复Subjoin无法获取客户端传递的header的问题。根据[RFC2616 4.2](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2)，使其对大小写不敏感
     - 坑: spring-boot-start默认使用tomcat,tomcat把所有请求header转小写了,使用spring-boot-start-jetty,则可以保留大小写,不确定哪个更好
 - concrete-core: 适配之前版本的signature规则

@@ -37,7 +37,7 @@
 
 > #### Hint::关于依赖的顺序
 >
-> 关于依赖的顺序，考虑到maven依赖的就近原则，为了尽可能减少不同作用域的依赖冲突，建议按照`test` `scope` `complie` `system`的作用域顺序维护依赖
+> 关于依赖的顺序，考虑到maven依赖的就近原则，为了尽可能减少不同作用域的依赖冲突，建议按照`test` `proviced` `compile` `system`的作用域顺序维护依赖
 
 建一个实现类 `org.coodex.concrete.demo.impl.DemoServiceImpl`
 
