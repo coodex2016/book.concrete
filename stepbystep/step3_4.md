@@ -147,7 +147,7 @@ messagePattern.resourceBundles=errorMsg/demo
 
 > #### Hint::
 >
-> concrete.properties是一个关键的配置文件，服务发布、系统配置、客户端环境等有很多配置项都在这定义，后续章节也会遇到
+> [concrete.properties](../impl/config.md#concrete.properties)是一个关键的配置文件，服务发布、系统配置、客户端环境等有很多配置项都在这定义，后续章节也会遇到
 >
 > messagePattern.resourceBundles用来指定默认情况下，错误信息模板使用的bundles，使用`,`分隔多个bundle
 

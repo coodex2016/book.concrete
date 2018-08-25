@@ -13,8 +13,6 @@ String value = ConcreteHelper.getString(tag, module, key);
 ```
 
 
-## concrete的一些配置
-
 ### concrete-api-tools
 
 - tag: api_gen， `API.genreteFor`使用到
@@ -39,3 +37,26 @@ String value = ConcreteHelper.getString(tag, module, key);
     - dubbo扩展
       - registry: 多个用`，`分隔的dubbo注册中心地址
       - name: 对应dubbo的Application名
+      
+## concrete的一些配置
+
+### concrete.properties
+
+| 配置名 | 说明 |
+| ----- | ---- |
+| messagePattern.resourceBundles | 用来指定默认情况下，错误信息模板使用的bundles，使用`,`分隔多个bundle |
+| service.executor.corePoolSize | concrete服务线程池，最低线程数，默认0 |
+| service.executor.maximumPoolSize | concrete服务线程池，最大线程数，默认Integer.MAX_VALUE |
+| service.executor.keepAliveTime | concrete服务线程池，当线程空闲达到该阈值时会被回收，单位，秒，默认60 |
+| aspect.bean.validation | 是否开启beanValidation，早期参数，默认为true，不推荐使用 |
+| concrete.api.packages |   |
+| concrete.appSet |  |
+| token.maxIdleTime |  分钟 |
+| tokenBasedTopicMessage.cacheLife |   |
+| zipkin.location |  |
+| module.name |  |
+| queue.default |  |
+| counter.thread.pool.size |  |
+| jsr339.charset | 默认utf-8 |
+
+

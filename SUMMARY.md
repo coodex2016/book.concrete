@@ -21,8 +21,9 @@
     * [3.8 多发布方式支持](stepbystep/step3_8.md)
     * [3.9 异步调用](stepbystep/step3_9.md)
     * 3.10 APM, 应用性能监控
-    * 4.1 有限状态机
-    * 4.3 Copier
+    * 4.1 Copier
+    * 4.2 coodex-utilites
+    * 4.3 有限状态机
     * 4.4 Spring data jpa小工具
 
 * [定义](definition/README.md)
