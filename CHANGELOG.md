@@ -1,4 +1,7 @@
 
+## 2018-08-26
+- coodex-utilites, concrete-core, concrete-core-spring: Topic可以按照jsr330规范注入了
+
 ## 2018-08-25
 - concrete-core:
     - 废弃`AbstractTokenBaseTopicSubscribeInterceptor`

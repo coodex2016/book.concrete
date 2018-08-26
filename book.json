@@ -12,12 +12,12 @@
   },
   "plugins": [
     "donate",
-    "mermaid-gb3",
     "page-footer-ex",
     "github",
     "toggle-chapters",
     "anchors",
-    "callouts"
+    "callouts",
+    "ga"
   ],
   "language": "zh-hans",
   "pluginsConfig": {
@@ -38,6 +38,9 @@
     },
     "callouts": {
       "showTypeInHeader": false
+    },
+    "ga":{
+      "token": "UA-124592164-1"
     }
   }
 }
