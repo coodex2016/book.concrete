@@ -101,5 +101,6 @@ public class DemoBoot extends SpringBootServletInitializer{
 > | JaxRS.code.angular.ts.v2 | 生成ts的接口定义代码包，基于Observable模式，推荐Angular版本高于4.3使用 |
 > | WebSocket.code.jquery.js.v1 | Websockt服务端，生成基于jquery的javascript api |
 > | WebSocket.code.angular.ts.v1 | Websockt服务端，生成ts的接口定义代码包，基于Observable模式 |
+> | JaxRS.code.axios.js.v1 | 20180829: 生成基于axios的代码包，promise |
 >
 > 这些生成的代码，面向程序开发者是接口一致的。当服务端切换发布方式时，业务代码不需要做任何调整。

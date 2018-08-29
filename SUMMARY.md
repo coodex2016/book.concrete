@@ -22,7 +22,7 @@
     * [3.9 多发布方式支持](stepbystep/step3_9.md)
     * [3.10 异步调用](stepbystep/step3_10.md)
     * 3.11 RBAC进阶
-    * 4.1 Copier
+    * [4.1 Copier](stepbystep/step4_1.md)
     * 4.2 coodex-utilites
     * 4.3 有限状态机
     * 4.4 Spring data jpa小工具

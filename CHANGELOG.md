@@ -1,4 +1,7 @@
 
+## 2018-08-29
+- concrete-api-tools: 新增对`axios`的支持 `JaxRS.code.axios.js.v1`
+
 ## 2018-08-26
 - coodex-utilites, concrete-core, concrete-core-spring: Topic可以按照jsr330规范注入了
 
