@@ -4,6 +4,8 @@ Concrete 是一种基于java的服务定义规范。
 
 https://github.com/coodex2016/concrete.coodex.org
 
+> [![](images/jetbrains.svg)](https://www.jetbrains.com)感谢[JetBrains](https://www.jetbrains.com/?from=concrete)提供IDE工具开源授权。
+
 [查看最近更新](#更新记录)
 
 > #### Note::
