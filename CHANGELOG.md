@@ -1,3 +1,5 @@
+## 2018-09-08
+- concrete-core, concrete-core-spring: 缺陷修复
 
 ## 2018-09-03
 - concrete-api-tools: 调整`axios`生成的代码
