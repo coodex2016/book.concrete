@@ -1,3 +1,24 @@
+## 2018-11-12
+- concrete-support-jaxrs: bugfix 修复Jaxrs模式下Subjoin未回传问题
+- concrete-core, concrete-courier-jms, concrete-courier-rabbitmq: 机制调整，主题无订阅时不产生消费者
+
+## 2018-09-14
+- concrete-api-tools: 修复生成Angular脚本，订阅时的错误
+
+## 2018-09-12
+- 0.2.4-SNAPSHOT
+- concrete-client: 增加`public static <T> T getInstance(Class<T> concreteServiceClass, Destination destination)`接口，不再完全依赖模块配置文件，暂行方案，后续考虑模块配置如何调整。
+
+
+## 2018-09-09
+- concrete-core: 
+    - 去掉多余的debug
+    - 增加ThrowableMapper，方便根据不同类型的异常转换ErrorInfo
+    - IF性能优化
+- concrete-core-spring: 缺陷修复;
+- concrete-test: 修改TokenID的值相同即token相同，不等同于tokenId
+- 0.2.3发布到中央库
+
 ## 2018-09-08
 - concrete-core, concrete-core-spring: 缺陷修复
 
