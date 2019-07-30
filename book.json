@@ -3,7 +3,7 @@
   "title": "Concrete手册",
   "author": "Shen Hainan<jujus.shen@126.com>",
   "variables": {
-    "concreteVersion": "0.2.3"
+    "concreteVersion": "0.4.0-SNAPSHOT"
   },
   "links": {
     "sidebar": {

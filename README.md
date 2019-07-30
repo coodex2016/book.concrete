@@ -1,57 +1,93 @@
-# Concrete 
+# Concrete
 
-Concrete 是一种基于java的服务定义规范。
+Concrete 是一种基于java的服务定义规范。尝试通过服务定义规范和工具链的支持，最大程度上降低开发者对技术的依赖，让开发者把更多的精力投入到需求分析、接口设计上.
 
-https://github.com/coodex2016/concrete.coodex.org
+我个人比较推崇技术0价值论，技术就是一堆0，应用场景才是最前面的1，没有应用场景的技术最终还是0，这也是我理解的为什么这么多技术组件选择开源的原因，所以，对于业务应用的开发者来讲，做好应用层才是最体现价值的点。
+这也是Concrete的价值观，通过对应用中较通用技术模式在不失扩展性的前提下进行封装来剥离应用开发者的关注点，将精力放到更有价值的事上。
 
-> [![](images/jetbrains.svg)](https://www.jetbrains.com)感谢[JetBrains](https://www.jetbrains.com/?from=concrete)提供IDE工具开源授权。
+concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonatype.org/)的快照库中。本文档编写完成时，会发布0.4.0到中央库。
 
-[查看最近更新](#更新记录)
+[项目地址 https://github.com/coodex2016/concrete.coodex.org](https://github.com/coodex2016/concrete.coodex.org) 欢迎fork，欢迎提issue
+
+[![](images/jetbrains.svg)](https://www.jetbrains.com)感谢[JetBrains](https://www.jetbrains.com/?from=concrete)提供IDE工具开源授权。
 
 > #### Note::
 >
 > 本正在文档重新编写过程中...
 
-## 与0.1.0的不同
+## Concrete构成
 
-差异还是蛮大的，基本上算是完全~~重构~~[^1]构建了一个版本，降低了工具链自身与spring的耦合度，去掉了默认的一些模块。
+![](images/concrete-arch.png)
 
-主要差别有
+- concrete-api
 
-|  | 0.1.0 | 0.2.X |
-| --- | --- | --- |
-| 服务提供 | 基于Jaxrs，使用POST方法 | 贴近RESTFul风格，支持服务原子优先级；支持WebSocket |
-| 客户端 | 基于sill，耦合了界面的一些元素，函数式调用 | 支持jQuery，对象式调用，Promise模式；支持Angular 2+；提供java客户端 |
-| 错误信息 | 无参数，前后端均需定义 | 支持模版，在设计中定义，根据客户端语言环境选择信息模版 |
-| api手册 | 前端手册，基于asciidoctor | 前后端分别提供手册，基于Gitbook |
-| 文档 | 无 | 这本就是 |
+  concrete-api主要用于定义concrete服务，包括了命名、RBAC、限流、异常信息、日志、签名验签、文档化、Token、Account、Warning、发布订阅、服务发布等
+  
+- concrete-core
 
-------
+  对concrete规范的一个默认实现，包括APM、服务结构化、拦截器、签名眼前、Token管理、发布订阅实现等。定义了BeanProvider，由所选择的DI容器自行扩展。
+  
+- concrete-core-spring
 
-## 当前版本 {{ book.concreteVersion }}
+  基于[Spring framework](https://spring.io/projects/spring-framework)的一个BeanProvider实现，为concrete提供DI支持。
+  并基于[Spring framework](https://spring.io/projects/spring-framework)封装了concrete-client、Topic等concrete组件的DI规范实现。
+  定义了使用concrete-core-spring的一些约定
+  
+- concrete-api-tools
 
-相比0.2.1/0.2.2，0.2.3快照版开始，侧重点在强化`设计上的模块化`，把系统从设计上分解为更小的模块，模块与模块之间采用耦合可松可紧，紧耦合基于API通过Client来实现，松耦合基于发布订阅模型实现。
+  根据项目所使用的concrete定义规范，生成服务文档、[jquery](https://github.com/jquery/jquery)、[Angular](https://angular.io/)、[axios](https://github.com/axios/axios)调用脚本、RXJava的代码
 
-逻辑模块可以在部署的时候选择合并方案。比如说，一个系统设计上分解为10个服务摸块，
-我们可以把1-4合并发布一个系统、5-10合并发布一个系统，也可以全部合并发布一个系统，
-只需要修改各模块对依赖模块的描述配置即可，不需要修改任何代码，
-为系统的部署提供一个更灵活更适应系统的方案，在一定程度上讲，到达微服务的效果。
+- concrete-support-**
 
-以上为例，我们这10个模块，3、5是计算密集型，1的io量和存数容量要求很大，其他都是简单的低负载的增删改查，
-那么，我们可以选择3台物理环境来部署，一台io密集型的物理环境部署模块1，一台高内存高计算能力低存储的物理环境部署3、5合并的模块，一台普通的物理环境来部署其他模块的合并系统。
+  服务发布的支持系列模块
+  
+  - concrete-support-jsr311/ concrete-support-jsr339
+  
+    基于JaxRS1.0/ 2.0规范的服务发布支持。
+    特别一提：concrete-support-jaxrs-swagger，一个基于OpenAPI规范、swagger-ui即插即用的文档、调试工具插件
+    
+  - concrete-support-amqp
+  
+    使用amqp broker发布服务，解决服务端无法固定公网地址端口的痛点
+    
+  - concrete-support-websocket
+  
+    基于Jsr356 Websocket的服务发布支持
+    
+  - concrete-support-dubbo
+  
+    使用com.alibaba:dubbo:2.6.6进行服务发布。
+    
+    此模块开发较早，后来dubbo捐献给apache，org.apache.dubbo系列API上有一些broken change，并未能直接支持，后续会开发concrete-support-apache-dubbo进行支持
+    
+- concrete-**-client(-rx)
 
-## 怎么用？
+  基于concrete规范的服务Java调用端，-rx的包支持rxjava2
 
-建议按照[从0开始](stepbystep/README.md)走一遍。
+  - concrete-jaxrs-client(-rx)
+  
+    调用jaxrs发布的concrete服务的java客户端实现
+  
+  - concrete-amqp-client
+  
+    调用amqp broker发布的concrete服务的java客户端实现，支持rxjava2
+    
+  - concrete-websocket-client-rx
+  
+    调用websocket发布的concrete服务的java客户端实现，支持同步调用
+    
+  - concrete-dubbo-client(-rx)
+  
+    调用com.alibaba:dubbo发布的concrete服务的Java客户端实现
+    
+- coodex-mock-spec/ coodex-mock-impl
 
-## 包说明
+  一套模拟POJO的定义规范/ 实现。[Usage](concrete-mock/README.md)
+    
+- coodex-utilities
 
-{% include "PACKAGES.md" %}
+  一些coodex的工具包，以及一些coodex认为比较好用的可扩展机制封装：coodex SPI、Config、Closure、I18N、天上人间等
 
-## 更新记录
-
-{% include "CHANGELOG.md" %}
-
---------
-[^1]: 重构一词使用有误。代码重构: [指对软件代码做任何更动以增加可读性或者简化结构而不影响输出结果](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A0%81%E9%87%8D%E6%9E%84)，而实质上，concrete 0.2.0改变了较多的行为和结果
-
+>  #### Note::
+>
+> 实际上，[coodex.org](https://coodex.org)将几个项目都合并到concrete项目中一起发布，后续会逐一拆分出来
