@@ -3,7 +3,10 @@
 - [concrete](README.md)
   - [使用](concrete-usage/README.md)
     - [定义一个concrete服务](concrete-usage/01.defineService.md)
-- [coodex-mock](concrete-mock/README.md)
+  - [规范手册](spec.md)
+    - [ConcreteService](concrete-api/ConcreteService.md)
+    - [Description](concrete-api/Description.md)
+- [coodex-mock](coodex-mock/README.md)
 - [coodex-utilities](coodex-utilities/README.md)
 
 <!-- * [从0开始](stepbystep/README.md)
