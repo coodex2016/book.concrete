@@ -3,6 +3,7 @@
 - [concrete](README.md)
   - [使用](concrete-usage/README.md)
     - [定义一个concrete服务](concrete-usage/01.defineService.md)
+    - [优化定义](concrete-usage/02.优化定义.md)
   - [规范手册](spec.md)
     - [ConcreteService](concrete-api/ConcreteService.md)
     - [Description](concrete-api/Description.md)
