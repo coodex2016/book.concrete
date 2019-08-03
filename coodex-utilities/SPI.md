@@ -53,3 +53,48 @@ coodex-utitlies中，基于java.util.ServiceLoader的Provider
 #### org.coodex.concrete.common.ConcreteServiceLoaderProvider
 
 concrete-core中，基于concrete BeanProvider的ServiceLoaderProvider
+
+## AcceptableServiceLoader<Param_Type, T extends AcceptableService<Param_Type>>
+
+一个coodex SPI的扩展，可以根据参数来选择一个能够处理该参数的服务实例
+
+假定有以下service
+
+```java
+public interface NumberAcceptableService extends AcceptableService<Integer>{}
+```
+
+奇数是一个服务实例，偶数是一个实例
+
+```java
+public class OddNumberAcceptableService implements NumberAcceptableService{
+    @Override
+    public boolean accept(Integer param) {
+        return param != null && param % 2 == 1;
+    }
+}
+```
+
+```java
+public class EvenNumberAcceptableService implements NumberAcceptableService{
+    @Override
+    public boolean accept(Integer param) {
+        return param != null && param % 2 == 0;
+    }
+}
+```
+
+使用
+
+```java
+    private static final AcceptableServiceLoader<Integer, NumberAcceptableService> NUMBER_SERVICE_LOADER =
+            new AcceptableServiceLoader<Integer, NumberAcceptableService>() {
+            };
+```
+
+```java
+        NUMBER_SERVICE_LOADER.getServiceInstance(0);// 获取到的是EvenNumberAcceptableService的实例
+        NUMBER_SERVICE_LOADER.getServiceInstance(1);// 获取到的是OddNumberAcceptableService的实例
+```
+
+AcceptableServiceLoader是一种策略模式([wiki](https://zh.wikipedia.org/wiki/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F), [百度](https://baike.baidu.com/item/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549#4_22))的设计，非常理想的隔离了不同数据控制实现

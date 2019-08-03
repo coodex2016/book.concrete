@@ -13,6 +13,7 @@
   - [规范手册](spec.md)
     - [ConcreteService](concrete-api/ConcreteService.md)
     - [Description](concrete-api/Description.md)
+    - [Account](concrete-api/Account.md)
   - [concrete-core](concrete-core/README.md)
     - [IF](concrete-core/IF.md)
     - BeanProvider
