@@ -82,7 +82,7 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
     
 - coodex-mock-spec/ coodex-mock-impl
 
-  一套模拟POJO的定义规范/ 实现。[Usage](concrete-mock/README.md)
+  一套模拟POJO的定义规范/ 实现。[Usage](coodex-mock/README.md)
     
 - coodex-utilities
 
