@@ -4,13 +4,13 @@ java 1.6起增加了SPI机制，定义好一个Provider Interface，然后在`ME
 
 java原生的SPI机制只能由jvm根据类来提供实例，按DI的理念来讲，我们不应该关注或者限定实例的提供方式，所以`coodex`设计了一个既兼容java SPI且扩展性更强的SPI机制。因为宝宝对迭代器理解有限，所以coodex SPI并没有像Java SPI那样提供迭代模式。
 
-## org.coodex.util.ServiceLoader\<T\>
+## org.coodex.util.ServiceLoader&lt;T>
 
-### Map\<String, T\> getAll()
+### Map<String, T> getAll()
 
 获取所有此类型的实例，coodex SPI为实例增加了一个名称的属性，参考了`javax.inject`规范的name设计，在扩展和服务选择时可以更方便的操作
 
-### T get(Class\<? extends \T>)
+### T get(Class<? extends T>)
 
 根据一个类型获取服务实例
 
@@ -26,7 +26,7 @@ java原生的SPI机制只能由jvm根据类来提供实例，按DI的理念来�
 
 获取默认的服务实例。coodex SPI建议每个Loader都能提供一个默认的服务实例，减少使用复杂度
 
-## org.coodex.util.ServiceLoaderImpl\<T\>
+## org.coodex.util.ServiceLoaderImpl&lt;T>
 
 coodex SPI的实现
 
