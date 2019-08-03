@@ -10,6 +10,11 @@
     - [Description](concrete-api/Description.md)
 - [coodex-mock](coodex-mock/README.md)
 - [coodex-utilities](coodex-utilities/README.md)
+  - [SPI](coodex-utitlities/SPI.md)
+  - [Profile](coodex-utitlities/profile.md)
+  - [单例模式](coodex-utilities/singleton.md)
+  - [闭包](coodex-utilities/closure.md)
+  - [i18n](coodex-utilities/i18n.md)
 
 <!-- * [从0开始](stepbystep/README.md)
     * [1.1 开始定义api](stepbystep/step1_1.md)
