@@ -5,6 +5,11 @@
     - [定义一个concrete服务](concrete-usage/01.defineService.md)
     - [优化定义](concrete-usage/02.优化定义.md)
     - [异常信息](concrete-usage/03.errorCodes.md)
+    - [警告信息](concrete-usage/04.warning.md)
+    - [Subjoin](concrete-usage/05.subjoin.md)
+    - Token
+    - RBAC
+    - 签名验签
   - [规范手册](spec.md)
     - [ConcreteService](concrete-api/ConcreteService.md)
     - [Description](concrete-api/Description.md)
