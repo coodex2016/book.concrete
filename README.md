@@ -9,7 +9,7 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
 
 [项目地址 https://github.com/coodex2016/concrete.coodex.org](https://github.com/coodex2016/concrete.coodex.org) 欢迎fork，欢迎提issue
 
-[![](images/jetbrains.svg)](https://www.jetbrains.com)感谢[JetBrains](https://www.jetbrains.com/?from=concrete)提供IDE工具开源授权。
+[![jetbrains](images/jetbrains.svg)](https://www.jetbrains.com)感谢[JetBrains](https://www.jetbrains.com/?from=concrete)提供IDE工具开源授权。
 
 > #### Note::
 >
@@ -17,7 +17,7 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
 
 ## Concrete构成
 
-![](images/concrete-arch.png)
+![concrete-arch](images/concrete-arch.png)
 
 - concrete-api
 
@@ -45,21 +45,21 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
   
     基于JaxRS1.0/ 2.0规范的服务发布支持。
     特别一提：concrete-support-jaxrs-swagger，一个基于OpenAPI规范、swagger-ui即插即用的文档、调试工具插件
-    
+
   - concrete-support-amqp
   
     使用amqp broker发布服务，解决服务端无法固定公网地址端口的痛点
-    
+
   - concrete-support-websocket
   
     基于Jsr356 Websocket的服务发布支持
-    
+
   - concrete-support-dubbo
   
     使用com.alibaba:dubbo:2.6.6进行服务发布。
-    
+
     此模块开发较早，后来dubbo捐献给apache，org.apache.dubbo系列API上有一些broken change，并未能直接支持，后续会开发concrete-support-apache-dubbo进行支持
-    
+
 - concrete-**-client(-rx)
 
   基于concrete规范的服务Java调用端，-rx的包支持rxjava2
@@ -71,19 +71,19 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
   - concrete-amqp-client
   
     调用amqp broker发布的concrete服务的java客户端实现，支持rxjava2
-    
+
   - concrete-websocket-client-rx
   
     调用websocket发布的concrete服务的java客户端实现，支持同步调用
-    
+
   - concrete-dubbo-client(-rx)
   
     调用com.alibaba:dubbo发布的concrete服务的Java客户端实现
-    
+
 - coodex-mock-spec/ coodex-mock-impl
 
   一套模拟POJO的定义规范/ 实现。[Usage](coodex-mock/README.md)
-    
+
 - coodex-utilities
 
   一些coodex的工具包，以及一些coodex认为比较好用的可扩展机制封装：coodex SPI、Config、Closure、I18N、天上人间等
