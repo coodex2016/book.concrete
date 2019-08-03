@@ -12,6 +12,7 @@
 - [coodex-utilities](coodex-utilities/README.md)
   - [SPI](coodex-utilities/SPI.md)
   - [Profile](coodex-utilities/profile.md)
+  - [Config](coodex-utilities/config.md)
   - [单例模式](coodex-utilities/singleton.md)
   - [闭包](coodex-utilities/closure.md)
   - [i18n](coodex-utilities/i18n.md)
