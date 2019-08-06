@@ -9,6 +9,7 @@
     - [Subjoin](concrete-usage/05.subjoin.md)
     - [Java Client](concrete-usage/06.javaClient.md)
     - [Token](concrete-usage/07.token.md)
+    - [多服务支持](concrete-usage/08.multi.md)
     - TODO: RBAC
     - TODO: 签名验签
     - TODO: 日志
