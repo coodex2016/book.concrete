@@ -51,7 +51,7 @@ A_SINGLETON.get();
 
 当然，这个例子不能说明什么，关键是，通过Singleton.Builder，使用build模式，我们可以在代码中隔离掉构建的具体细节
 
-## org.coodex.util.SingletonMap<K, V>
+## org.coodex.util.SingletonMap&lt;K, V>
 
 SingletonMap按照键值对的方式管理单例的实例，每个键的值都维持一个单例。
 

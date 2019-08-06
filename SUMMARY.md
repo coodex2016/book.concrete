@@ -7,21 +7,33 @@
     - [异常信息](concrete-usage/03.errorCodes.md)
     - [警告信息](concrete-usage/04.warning.md)
     - [Subjoin](concrete-usage/05.subjoin.md)
-    - Token
-    - RBAC
-    - 签名验签
+    - TODO: Java Client
+    - TODO: Token
+    - TODO: RBAC
+    - TODO: 签名验签
+    - TODO: 日志
+    - TODO: 限流
+    - TODO: 优先级
+    - TODO: Topic
+    - TODO: 文档生成
+    - TODO: 前端脚本生成
   - [规范手册](spec.md)
-    - [ConcreteService](concrete-api/ConcreteService.md)
-    - [Description](concrete-api/Description.md)
-    - [Account](concrete-api/Account.md)
+    - [TODO: ConcreteService](concrete-api/ConcreteService.md)
+    - [TODO: Description](concrete-api/Description.md)
+    - [TODO: Account](concrete-api/Account.md)
+    - TODO: Application
+    - TODO: AccessAllow & Safely
+    - TODO: Account
+    - TODO: Priority
+    - TODO: Signable
   - [concrete-core](concrete-core/README.md)
     - [IF](concrete-core/IF.md)
-    - BeanProvider
-    - Copier
-    - APM
-    - Interceptors
-    - Signature
-    - 订阅发布
+    - TODO: BeanProvider
+    - TODO: Copier
+    - TODO: APM
+    - TODO: Interceptors
+    - TODO: Signature
+    - TODO: 订阅发布
 - [coodex-mock](coodex-mock/README.md)
 - [coodex-utilities](coodex-utilities/README.md)
   - [SPI](coodex-utilities/SPI.md)
@@ -30,12 +42,12 @@
   - [单例模式](coodex-utilities/singleton.md)
   - [闭包](coodex-utilities/closure.md)
   - [i18n](coodex-utilities/i18n.md)
-  - concurrent
-  - clock
-  - Common
-  - CRC
-  - SSL helper
-  - count
+  - TODO: concurrent
+  - TODO: clock
+  - TODO: Common
+  - TODO: CRC
+  - TODO: SSL helper
+  - TODO: count
 
 <!-- * [从0开始](stepbystep/README.md)
     * [1.1 开始定义api](stepbystep/step1_1.md)

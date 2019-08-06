@@ -14,7 +14,6 @@
     "donate",
     "page-footer-ex",
     "github",
-    "toggle-chapters",
     "anchors",
     "callouts",
     "ga"
@@ -28,7 +27,7 @@
       "title": "<strong><font size='7'>壕</font>，请用<font size='5'>金钱</font>尽情<font size='6'>羞辱</font>我<font size='7'>！</font></strong>"
     },
     "page-footer-ex": {
-      "copyright": "&copy; [coodex.org](https://coodex.org) 2016 All rights reserved",
+      "copyright": "(&#x254;) [coodex.org](https://coodex.org) 2016 - 2019",
       "markdown": true,
       "update_label": "修订时间：",
       "update_format": "YYYY-MM-DD HH:mm:ss"

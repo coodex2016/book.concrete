@@ -6,11 +6,11 @@ java原生的SPI机制只能由jvm根据类来提供实例，按DI的理念来�
 
 ## org.coodex.util.ServiceLoader&lt;T>
 
-### Map<String, T> getAll()
+### Map&lt;String, T> getAll()
 
 获取所有此类型的实例，coodex SPI为实例增加了一个名称的属性，参考了`javax.inject`规范的name设计，在扩展和服务选择时可以更方便的操作
 
-### T get(Class<? extends T>)
+### T get(Class&lt;? extends T>)
 
 根据一个类型获取服务实例
 
@@ -54,7 +54,7 @@ coodex-utitlies中，基于java.util.ServiceLoader的Provider
 
 concrete-core中，基于concrete BeanProvider的ServiceLoaderProvider
 
-## AcceptableServiceLoader<Param_Type, T extends AcceptableService<Param_Type>>
+## AcceptableServiceLoader&lt;Param_Type, T extends AcceptableService&lt;Param_Type>>
 
 一个coodex SPI的扩展，可以根据参数来选择一个能够处理该参数的服务实例
 
