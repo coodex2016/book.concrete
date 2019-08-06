@@ -7,7 +7,7 @@
     - [异常信息](concrete-usage/03.errorCodes.md)
     - [警告信息](concrete-usage/04.warning.md)
     - [Subjoin](concrete-usage/05.subjoin.md)
-    - TODO: Java Client
+    - [Java Client](concrete-usage/06.javaClient.md)
     - TODO: Token
     - TODO: RBAC
     - TODO: 签名验签
