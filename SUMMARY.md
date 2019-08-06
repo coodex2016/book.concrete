@@ -8,7 +8,7 @@
     - [警告信息](concrete-usage/04.warning.md)
     - [Subjoin](concrete-usage/05.subjoin.md)
     - [Java Client](concrete-usage/06.javaClient.md)
-    - TODO: Token
+    - [Token](concrete-usage/07.token.md)
     - TODO: RBAC
     - TODO: 签名验签
     - TODO: 日志
@@ -17,6 +17,7 @@
     - TODO: Topic
     - TODO: 文档生成
     - TODO: 前端脚本生成
+    - TODO: 附件
   - [规范手册](spec.md)
     - [TODO: ConcreteService](concrete-api/ConcreteService.md)
     - [TODO: Description](concrete-api/Description.md)
