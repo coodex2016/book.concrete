@@ -11,7 +11,7 @@
     - [Token](concrete-usage/07.token.md)
     - [多服务支持](concrete-usage/08.multi.md)
     - [RBAC](concrete-usage/09.rbac.md)
-    - TODO: 签名验签
+    - [签名验签](concrete-usage/10.signature.md)
     - TODO: 日志
     - TODO: 限流
     - TODO: 优先级
