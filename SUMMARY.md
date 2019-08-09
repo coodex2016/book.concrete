@@ -13,7 +13,8 @@
     - [RBAC](concrete-usage/09.rbac.md)
     - [签名验签](concrete-usage/10.signature.md)
     - [日志](concrete-usage/11.log.md)
-    - TODO: 限流
+    - [限流](concrete-usage/12.rateLimited.md)
+    - TODO: 服务时间限定
     - TODO: 优先级
     - TODO: Topic
     - TODO: 文档生成
