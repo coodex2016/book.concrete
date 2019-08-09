@@ -13,7 +13,7 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
 
 > #### Note::
 >
-> 本正在文档重新编写过程中...
+> 本文档所涉及的代码已共享到[github](https://github.com/coodex2016/concrete-demo-040), 本正在文档重新编写过程中...
 
 ## Concrete构成
 
