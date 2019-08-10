@@ -14,9 +14,8 @@
     - [签名验签](concrete-usage/10.signature.md)
     - [日志](concrete-usage/11.log.md)
     - [限流](concrete-usage/12.rateLimited.md)
-    - TODO: 服务时间限定
-    - TODO: 优先级
-    - TODO: Topic
+    - [服务时间限定](concrete-usage/13.serviceTiming.md)
+    - [Topic](concrete-usage/14.topis.md)
     - TODO: 文档生成
     - TODO: 前端脚本生成
     - TODO: 附件
