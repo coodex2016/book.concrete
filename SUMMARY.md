@@ -16,6 +16,7 @@
     - [限流](concrete-usage/12.rateLimited.md)
     - [服务时间限定](concrete-usage/13.serviceTiming.md)
     - [Topic](concrete-usage/14.topis.md)
+    - [APM](concrete-usage/15.apm.md)
     - TODO: 文档生成
     - TODO: 前端脚本生成
     - TODO: 附件
@@ -32,7 +33,6 @@
     - [IF](concrete-core/IF.md)
     - TODO: BeanProvider
     - TODO: Copier
-    - TODO: APM
     - TODO: Interceptors
     - TODO: Signature
     - TODO: 订阅发布
