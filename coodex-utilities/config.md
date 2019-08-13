@@ -41,3 +41,14 @@ public interface Configuration {
 - Config.getArray(String key, String delim, String[] defaultValue, String... namespaces)
 
 `coodex-utitlies`基于[`Profile`](profile.md)实现了一个Condfiguration，后续`concrete`会提供基于配置中心的实现，方便集群应用的配置获取
+
+在基于`Profile`的实现中，命名空间使用`.`链接，如Configuratio注释中的案例优先级则为：
+
+- Profile a.b.c 中的key
+- Profile a.b 中的key
+- Profile a 中的key
+- 默认Profile中的key
+
+> #### Note::
+>
+> 默认Profile，非`concrete`环境是`coodex`,`concrete`环境是`concrete`
