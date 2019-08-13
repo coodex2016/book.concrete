@@ -17,7 +17,7 @@
     - [服务时间限定](concrete-usage/13.serviceTiming.md)
     - [Topic](concrete-usage/14.topics.md)
     - [APM](concrete-usage/15.apm.md)
-    - TODO: 文档生成
+    - [文档生成](concrete-usage/16.docGen.md)
     - TODO: 前端脚本生成
     - TODO: 附件
   - [规范手册](spec.md)
