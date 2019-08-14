@@ -26,7 +26,6 @@
     - [TODO: Account](concrete-api/Account.md)
     - TODO: Application
     - TODO: AccessAllow & Safely
-    - TODO: Account
     - TODO: Priority
     - TODO: Signable
   - [concrete-core](concrete-core/README.md)
@@ -45,11 +44,11 @@
   - [闭包](coodex-utilities/closure.md)
   - [i18n](coodex-utilities/i18n.md)
   - [天上人间](coodex-utilities/clock.md)
+  - [count](coodex-utilities/count.md)
   - TODO: concurrent
   - TODO: Common
   - TODO: CRC
   - TODO: SSL helper
-  - TODO: count
 
 <!-- * [从0开始](stepbystep/README.md)
     * [1.1 开始定义api](stepbystep/step1_1.md)

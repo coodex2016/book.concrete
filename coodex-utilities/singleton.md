@@ -57,4 +57,4 @@ SingletonMap按照键值对的方式管理单例的实例，每个键的值都�
 
 同样的，也是通过build模式来构建实例，构建时，可以根据键信息进行构建。
 
-SingletonMap也可以用作缓存，构造SingletonMap时，可以传入单例最大声明周期，当单例实例存活超过此周期时，SingletonMap会把它移除，再次需要获取时，会重新build一个。
+SingletonMap也可以用作缓存，构造SingletonMap时，可以传入单例最大生命周期，当单例实例存活超过此周期时，SingletonMap会把它移除，再次需要获取时，会重新build一个。
