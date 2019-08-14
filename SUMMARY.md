@@ -45,9 +45,9 @@
   - [i18n](coodex-utilities/i18n.md)
   - [天上人间](coodex-utilities/clock.md)
   - [count](coodex-utilities/count.md)
+  - [CRC](coodex-utilities/crc.md)
   - TODO: concurrent
   - TODO: Common
-  - TODO: CRC
   - TODO: SSL helper
 
 <!-- * [从0开始](stepbystep/README.md)
