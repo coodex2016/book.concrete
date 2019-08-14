@@ -46,7 +46,7 @@
   - [天上人间](coodex-utilities/clock.md)
   - [count](coodex-utilities/count.md)
   - [CRC](coodex-utilities/crc.md)
-  - TODO: concurrent
+  - [concurrent](coodex-utilities/concurrent.md)
   - TODO: Common
   - TODO: SSL helper
 
