@@ -110,6 +110,14 @@ public class CounterDemo {
 }
 ```
 
+SPI `META-INF/services/org.coodex.count.Counter`
+
+```txt
+org.coodex.concrete.demo.boot.CounterDemo$BoxedCounter
+org.coodex.concrete.demo.boot.CounterDemo$MinMaxCounter
+org.coodex.concrete.demo.boot.CounterDemo$TotalCounter
+```
+
 运行以后日志太长，我们把三个Counter的部分关键信息摘出来看看:
 
 ```txt
