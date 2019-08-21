@@ -93,8 +93,8 @@ public class EvenNumberAcceptableService implements NumberAcceptableService{
 ```
 
 ```java
-        NUMBER_SERVICE_LOADER.getServiceInstance(0);// 获取到的是EvenNumberAcceptableService的实例
-        NUMBER_SERVICE_LOADER.getServiceInstance(1);// 获取到的是OddNumberAcceptableService的实例
+        NUMBER_SERVICE_LOADER.select(0);// 获取到的是EvenNumberAcceptableService的实例
+        NUMBER_SERVICE_LOADER.select(1);// 获取到的是OddNumberAcceptableService的实例
 ```
 
 AcceptableServiceLoader是一种策略模式([wiki](https://zh.wikipedia.org/wiki/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F), [百度](https://baike.baidu.com/item/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549#4_22))的设计，非常理想的隔离了不同数据控制实现

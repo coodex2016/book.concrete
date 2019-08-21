@@ -1,4 +1,20 @@
+# chnage log
+
+## 2019-08-21
+
+- SingletonMap增加getNullKeyOnce接口，用以处理key为null是的key转化；增加StringKeySingletonMap，默认nullKey转为"nullKey_" + uuid
+- AcceptableServiceLoader.getServiceInstance和getServiceInstances更名为select和selectAll
+- signautre拦截器重构：
+  - 痛点：
+    - 乱
+  - 方案：
+    - Server端与Client端分离
+    - Server端使用Config来重载四个必要属性名，命名空间signature/appSet下的signature.property.keyId|noise|sign|algorithm，为兼容现行版本，也支持property.keyId|noise|sign|algorithm，但会有warn提示
+    - [x] 原KeyStore机制作废，使用ASPI机制重新设计，原机制依然兼容，提示警告
+
+
 ## 2019-01-03
+
 - 修复JaxrsSubjoin可能出现content-type重复的问题
 - 定义Configuration接口，用于获取系统的配置；提供默认的基于Profile的Configuration实现；提供Config门面简化获取配置方式
 - coodex及concrete配置类内容迁移到Configuration接口，兼容了之前从Profile中获取的行为
