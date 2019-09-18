@@ -22,7 +22,7 @@
     - TODO: 附件
   - [规范手册](spec.md)
     - [TODO: ConcreteService](concrete-api/ConcreteService.md)
-    - [TODO: Description](concrete-api/Description.md)
+    - [Description](concrete-api/Description.md)
     - [TODO: Account](concrete-api/Account.md)
     - TODO: Application
     - TODO: AccessAllow & Safely
@@ -36,6 +36,7 @@
     - TODO: Signature
     - TODO: 订阅发布
 - [coodex-mock](coodex-mock/README.md)
+- [coodex-billing](coodex-billing/README.md)
 - [coodex-utilities](coodex-utilities/README.md)
   - [SPI](coodex-utilities/SPI.md)
   - [Profile](coodex-utilities/profile.md)
