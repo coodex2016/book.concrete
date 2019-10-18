@@ -16,6 +16,7 @@
     - [限流](concrete-usage/12.rateLimited.md)
     - [服务时间限定](concrete-usage/13.serviceTiming.md)
     - [应用License](concrete-usage/18.license.md)
+    - [SaaS模式授权](concrete-usage/19.production.md)
     - [Topic](concrete-usage/14.topics.md)
     - [APM](concrete-usage/15.apm.md)
     - [文档生成](concrete-usage/16.docGen.md)
