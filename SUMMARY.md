@@ -50,6 +50,7 @@
   - [count](coodex-utilities/count.md)
   - [CRC](coodex-utilities/crc.md)
   - [concurrent](coodex-utilities/concurrent.md)
+  - [重试](coodex-utilities/retry.md)
   - TODO: Common
   - TODO: SSL helper
 
