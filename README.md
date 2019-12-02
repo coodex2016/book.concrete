@@ -60,11 +60,11 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
 
     此模块开发较早，后来dubbo捐献给apache，org.apache.dubbo系列API上有一些broken change，并未能直接支持，后续会开发concrete-support-apache-dubbo进行支持
 
-- concrete-**-client(-rx)
+- concrete-**-client
 
-  基于concrete规范的服务Java调用端，-rx的包支持rxjava2
+  基于concrete规范的服务Java同步/异步调用端
 
-  - concrete-jaxrs-client(-rx)
+  - concrete-jaxrs-client
   
     调用jaxrs发布的concrete服务的java客户端实现
   
@@ -72,11 +72,11 @@ concrete当前版本为0.4.0-SNAPSHOT，已发布到[sonatype](https://oss.sonat
   
     调用amqp broker发布的concrete服务的java客户端实现，支持rxjava2
 
-  - concrete-websocket-client-rx
+  - concrete-websocket-client
   
     调用websocket发布的concrete服务的java客户端实现，支持同步调用
 
-  - concrete-dubbo-client(-rx)
+  - concrete-dubbo-client
   
     调用com.alibaba:dubbo发布的concrete服务的Java客户端实现
 
