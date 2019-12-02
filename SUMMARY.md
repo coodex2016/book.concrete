@@ -21,6 +21,7 @@
     - [APM](concrete-usage/15.apm.md)
     - [文档生成](concrete-usage/16.docGen.md)
     - [前端脚本生成](concrete-usage/17.codeGen.md)
+    - [响应式API](concrete-usage/18.rxClient.md)
     - TODO: 附件
   - [规范手册](spec.md)
     - [TODO: ConcreteService](concrete-api/ConcreteService.md)
