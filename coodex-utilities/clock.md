@@ -129,12 +129,13 @@ org.coodex.util.clock.RemoteClockAgent
 
 ## 接口说明
 
-- `Clock.currentTimeMillis()`: 对标`System.currentTimeMillis()`，获取`人间`当前时间的毫秒数
+- `Clock.currentTimeMillis(long)`: 对标`System.currentTimeMillis(long)`，获取`人间`当前时间的毫秒数
 - `Clock.getCalendar()`: 对标`Calendar.getInstance()`，获取`人间`当前时间的Calendar对象
-- `Clocl.objWait()`: 对标`Object.wait()`，根据对象获得最长`人间`时间为指定参数的锁
+- `Clocl.objWait(Object, long)`: 对标`Object.wait(long)`，根据对象获得最长`人间`时间为指定参数的锁
 - `Clock.toMillis()`: 对标`TimeUnit.toMillis()`
-- `Clock.sleep()`: 对标`Thread.sleep()`，当前休眠一定`人间`时长(毫秒数)
+- `Clock.sleep(long)`: 对标`Thread.sleep(long)`，当前休眠一定`人间`时长(毫秒数)
+- `Clock.sleep(TimeUnit, long)`: 对标`TimeUnit.sleep(long)`
 
-暂不支持`TimeUnit.sleep`
+~~暂不支持`TimeUnit.sleep`~~
 
 `coodex`及`concrete`时间相关都已经统一到`天上人间`。
