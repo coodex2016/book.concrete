@@ -5,6 +5,7 @@
 ## usage
 
 ```java
+        System.out.println(
                 Tracer.newTracer()
 //                .logger(log) //  org.slf4j.Logger
 //                .logger(String.class) // logger will be named after clazz
@@ -16,19 +17,23 @@
 //                        return "test";
 //                    }
 //                })
-                .trace(new Callable<Object>() {
-                    @Override
-                    public Object call() throws Exception {
-                        Tracer.putTrace("hello", "coodex"); // 需要跟踪的信息项
+                        .trace(new Callable<String>() {
+                            @Override
+                            public String call() throws Exception {
+                                Tracer.putTrace("hello", "coodex"); // 需要跟踪的信息项
 
-                        Tracer.start("case1");
-                        Clock.sleep(1000);
-                        Tracer.end("case1");
+                                Tracer.start("case1");
+                                Clock.sleep(1000);
+                                Tracer.end("case1");
 
-                        Tracer.start("case2");
-                        Clock.sleep(300);
-                        Tracer.end("case2");
-                        return null;
-                    }
-                });
+                                Tracer.start("case2");
+                                Clock.sleep(300);
+                                Tracer.end("case2");
+                                if (new Random().nextBoolean())
+                                    throw new RuntimeException("em~~~~");
+                                else
+                                    return "hello tracer.";
+                            }
+                        })
+        );
 ```
