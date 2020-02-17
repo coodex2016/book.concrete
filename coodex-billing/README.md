@@ -142,6 +142,11 @@ public class KTVConsumption implements TimeBasedChargeable {
     }
 
     @Override
+    public String getRefId() {
+        return "月月鸟";
+    }
+
+    @Override
     public List<Revision> getRevisions() {
         // 暂不使用优惠
         return null;
