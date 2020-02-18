@@ -176,6 +176,11 @@ public class KTVBillCalculator extends AbstractTimeBasedCalculator<KTVConsumptio
     }
 
     @Override
+    protected KTVConsumption copyChargeable(KTVConsumption chargeable, List<Revision> revisions) {
+        return chargeable;
+    }
+
+    @Override
     public boolean accept(KTVConsumption param) {
         return param != null;
     }
