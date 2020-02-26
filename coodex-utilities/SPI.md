@@ -54,20 +54,20 @@ coodex-utitlies中，基于java.util.ServiceLoader的Provider
 
 concrete-core中，基于concrete BeanProvider的ServiceLoaderProvider
 
-## AcceptableServiceLoader&lt;Param_Type, T extends AcceptableService&lt;Param_Type>>
+## SelectableServiceLoader&lt;Param_Type, T extends SelectableService&lt;Param_Type>>
 
 一个coodex SPI的扩展，可以根据参数来选择一个能够处理该参数的服务实例
 
 假定有以下service
 
 ```java
-public interface NumberAcceptableService extends AcceptableService<Integer>{}
+public interface NumberSelectableService extends SelectableService<Integer>{}
 ```
 
 奇数是一个服务实例，偶数是一个实例
 
 ```java
-public class OddNumberAcceptableService implements NumberAcceptableService{
+public class OddNumberSelectableService implements NumberSelectableService{
     @Override
     public boolean accept(Integer param) {
         return param != null && param % 2 == 1;
@@ -76,7 +76,7 @@ public class OddNumberAcceptableService implements NumberAcceptableService{
 ```
 
 ```java
-public class EvenNumberAcceptableService implements NumberAcceptableService{
+public class EvenNumberSelectableService implements NumberSelectableService{
     @Override
     public boolean accept(Integer param) {
         return param != null && param % 2 == 0;
@@ -87,14 +87,14 @@ public class EvenNumberAcceptableService implements NumberAcceptableService{
 使用
 
 ```java
-    private static final AcceptableServiceLoader<Integer, NumberAcceptableService> NUMBER_SERVICE_LOADER =
-            new AcceptableServiceLoader<Integer, NumberAcceptableService>() {
+    private static final SelectableServiceLoader<Integer, NumberSelectableService> NUMBER_SERVICE_LOADER =
+            new SelectableServiceLoader<Integer, NumberSelectableService>() {
             };
 ```
 
 ```java
-        NUMBER_SERVICE_LOADER.select(0);// 获取到的是EvenNumberAcceptableService的实例
-        NUMBER_SERVICE_LOADER.select(1);// 获取到的是OddNumberAcceptableService的实例
+        NUMBER_SERVICE_LOADER.select(0);// 获取到的是EvenNumberSelectableService的实例
+        NUMBER_SERVICE_LOADER.select(1);// 获取到的是OddNumberSelectableService的实例
 ```
 
-AcceptableServiceLoader是一种策略模式([wiki](https://zh.wikipedia.org/wiki/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F), [百度](https://baike.baidu.com/item/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549#4_22))的设计，非常理想的隔离了不同数据控制实现
+SelectableServiceLoader是一种策略模式([wiki](https://zh.wikipedia.org/wiki/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F), [百度](https://baike.baidu.com/item/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549#4_22))的设计，非常理想的隔离了不同数据控制实现

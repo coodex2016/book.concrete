@@ -52,7 +52,7 @@
   - [CRC](coodex-utilities/crc.md)
   - [concurrent](coodex-utilities/concurrent.md)
   - [重试](coodex-utilities/retry.md)
-  - [Tracer](coodex-utilites/tracer.md)
+  - [Tracer](coodex-utilities/tracer.md)
   - TODO: Common
   - TODO: SSL helper
 
