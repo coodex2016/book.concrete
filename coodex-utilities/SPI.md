@@ -88,7 +88,7 @@ public class EvenNumberSelectableService implements NumberSelectableService{
 
 ```java
     private static final SelectableServiceLoader<Integer, NumberSelectableService> NUMBER_SERVICE_LOADER =
-            new SelectableServiceLoader<Integer, NumberSelectableService>() {
+            new LazySelectableServiceLoader<Integer, NumberSelectableService>() {
             };
 ```
 
@@ -98,3 +98,5 @@ public class EvenNumberSelectableService implements NumberSelectableService{
 ```
 
 SelectableServiceLoader是一种策略模式([wiki](https://zh.wikipedia.org/wiki/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F), [百度](https://baike.baidu.com/item/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1212549#4_22))的设计，非常理想的隔离了不同数据控制实现
+
+> 20200302, concrete-core-spring增加了对ServiceLoader和SelectableServiceLoader的自动注入功能

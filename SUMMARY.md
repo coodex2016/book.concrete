@@ -40,6 +40,7 @@
     - TODO: 订阅发布
 - [coodex-mock](coodex-mock/README.md)
 - [coodex-billing](coodex-billing/README.md)
+- [coodex-junit-enhancer](coodex-junit-enhance/README.md)
 - [coodex-utilities](coodex-utilities/README.md)
   - [SPI](coodex-utilities/SPI.md)
   - [Profile](coodex-utilities/profile.md)
